@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EEn este pagina se puede simular los resultados del mundial para ver quien sale campeón"">
+    <meta name="keywords" content="Futbol, Mundial, Qatar 2022">
+    <meta name="robots" content="index"/>
+    <meta name="author" content="Martin Wittmann">
+    <meta property="og:title" content="Encontra tu diseño" />
+    <meta property="og:type" content="En este pagina se puede simular los resultados del mundial para ver quien sale campeón">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="registro.js">
+    <link rel="stylesheet" href="index.js">
+    <link rel="stylesheet" href="carrito.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="icon" href="imagenes/logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <title>Simulador del Mundial</title>
+</head>
+<body>
+<!--CABECERA-->
+<!--CABECERA DESKTOP-->
+<header>
+    <section id="cabecera">
+        <div class="containerfluid">
+            <nav class="">
+                <ul class="nav">
+                    <a class="cabeceraLogo" title="HOME" href="index.html"><img src="./imagenes/qatar.jpg" alt="logoqatar" /></a>
+                    <li class="nav-item"><a class="nav-link" href="./fixture.html">Fixture</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./estadios.html">Estadios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./ropa.html">Ropa</a></li>
+                    <li><h1></h1></li>
+                    <li>
+                        <form>
+                            <div class="remember">
+                                <button><a href="./registro.html">Ingresá o registrate</a></button>
+                                <label for="entername" type="hidden"></label>
+                                <input id="entername" type="hidden" required /> 
+                                <label for="email" type="hidden"></label>
+                                <input  name="email" type="hidden" id="email" /> 
+                                <input id="submitname" type="hidden" value="Ingresar" />
+                            </div>
+                            <div class="forget">
+                                <label for="forgetname"></label>
+                                <input id="forgetname" type="reset" value="Cambiar usuario" />
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+<!--CABECERA MOBILE-->
+    <section id="hamburguesa">
+        <nav>
+            <div class="navbar">
+            <div class="container nav-container">
+                <input class="checkbox" type="checkbox" name="MENU"/>
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>  
+                <div class="logo">
+                    <a href="./index.html"><img src="./imagenes/logo.jpg" alt="logo"></a>
+                </div>
+                <div class="menu-items">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./fixture.html">Fixture</a></li>
+                    <li><a href="./estadios.html">Estadios</a></li>
+                    <li><a href="./simulador.html">Simulador de partidos</a></li>
+                    <li><a href="./ropa.html">Ropa</a></li>
+                    <li><a href="./contactanos.html">Contacto</a></li>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+</header>
+    <!--FIN CABECERA-->
+<main id="contenido">
+        <h2>Simulador del mundial</h2>
+        
+<!-- GRUPO A -->
+        <button type="submit" class="btn" id="enviar">Enviar resultados</button>
+        <button type="submit" class="btn" id="guardar">Guardar resultados</button>
+        <h2>GRUPO A</h2>
+        <div id="grupoA">
+            <div class="partidos">
+<!-- PRIMERA FECHA GRUPO A-->
+                <section class="primerafecha seccion__inicial">
+                    <h2>Primera Fecha</h2>
+                    <div class="primerPartido">
+                    <div class="izquierdo">
+                        <figure><img src="./imagenes/catar.png" alt="escudoqatar"><figcaption>Qatar</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoLocal1" id="equipoLocal1" data-id="1" placeholder="0">
+                        <input type="text" name="teamlocal1" id="teamlocal1" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    <div class="derecho">
+                        <figure><img src="./imagenes/ecuador.png" alt="escudoecuador"><figcaption>Ecuador</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoVisitante1" id="equipoVisitante1" data-id="1" placeholder="0">
+                        <input type="text" name="teamvisita1" id="teamvisita1" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    </div>
+                    <div class="segundoPartido">
+                    <div class="izquierdo">
+                        <figure><img src="./imagenes/senegal.png" alt="escudosenegal"><figcaption>Senegal</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoLocal2" id="equipoLocal2" data-id="2" placeholder="0">
+                        <input type="text" name="teamlocal2" id="teamlocal2" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    <div class="derecho">
+                        <figure><img src="./imagenes/bajos.png" alt="escudopaisesbajos"><figcaption>Paises Bajos</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoVisitante2" id="equipoVisitante2" data-id="2" placeholder="0">
+                        <input type="text" name="teamvisita2" id="teamvisita2" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    </div>
+                </section>
+<!-- SEGUNDA FECHA GRUPO A-->
+                <section class="segundafecha seccion__inicial">
+                    <h2>Segunda Fecha</h2>
+                    <div class="tercerPartido">
+                    <div class="izquierdo">
+                        <figure><img src="./imagenes/catar.png" alt="escudoqatar"><figcaption>Qatar</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoLocal3" id="equipoLocal3" data-id="3" placeholder="0">
+                        <input type="text" name="teamlocal3" id="teamlocal3" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    <div class="derecho">
+                        <figure><img src="./imagenes/senegal.png" alt="escudosenegal"><figcaption>Senegal</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoVisitante3" id="equipoVisitante3" data-id="3" placeholder="0">
+                        <input type="text" name="teamvisita3" id="teamvisita3" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    </div>
+                    <div class="cuartoPartido">
+                        <div class="izquierdo">
+                            <figure><img src="./imagenes/bajos.png" alt="escudopaisesbajos"><figcaption>Paises Bajos</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoLocal4" id="equipoLocal4" data-id="4" placeholder="0"></td>
+                            <input type="text" name="teamlocal4" id="teamlocal4" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                        <div class="derecho">
+                            <figure><img src="./imagenes/ecuador.png" alt="escudoecuador"><figcaption>Ecuador</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoVisitante4" id="equipoVisitante4" data-id="4" placeholder="0">
+                            <input type="text" name="teamvisita4" id="teamvisita4" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                    </div>
+                </section>
+<!-- TERCERA FECHA GRUPO A-->
+                <section class="tercerafecha seccion__inicial">
+                    <h2>Tercera Fecha</h2>
+                    <div class="quintoPartido">
+                        <div class="izquierdo">
+                            <figure><img src="./imagenes/ecuador.png" alt="escudoecuador"><figcaption>Ecuador</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoLocal5" id="equipoLocal5" data-id="5" placeholder="0">
+                            <input type="text" name="teamlocal5" id="teamlocal5" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                        <div class="derecho">
+                            <figure><img src="./imagenes/senegal.png" alt="escudosenegal"><figcaption>Senegal</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoVisitante5" id="equipoVisitante5" data-id="5" placeholder="0">
+                            <input type="text" name="teamvisita5" id="teamvisita5" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                    </div>
+                    <div class="sextoPartido">
+                        <div class="izquierdo">    
+                            <figure><img src="./imagenes/bajos.png" alt="escudopaisesbajos"><figcaption>Paises Bajos</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoLocal6" id="equipoLocal6" data-id="6" placeholder="0">
+                            <td><input type="text" name="teamlocal6" id="teamlocal6" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                        <div class="derecho">
+                            <figure><img src="./imagenes/catar.png" alt="escudoqatar"><figcaption>Qatar</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoVisitante6" id="equipoVisitante6" data-id="6" placeholder="0">
+                            <input type="text" name="teamvisita6" id="teamvisita6" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                    </div>
+                </section>
+            </div>
+<!-- TABLA POSICIONES GRUPO A -->
+            <div>
+                    <table class="tabla">
+                            <tbody class="tablaPosiciones">
+                                <tr>
+                                    <th></th>
+                                    <th>PTOS</th>
+                                    <th>GF</th>
+                                    <th>GC</th>
+                                    <th>DIF</th>
+                                </tr>
+                                <tr>
+                                    <td>Qatar</th>
+                                    <td id="ptosqat">0</td>
+                                    <td id="golesqat">0</td>
+                                    <td id="golesconqat">0</td>
+                                    <td id="difgolqat">0</td>
+                                </tr>
+                                <tr>
+                                    <td>Ecuador</th>
+                                    <td id="ptosecu">0</td>
+                                    <td id="golesecu">0</td>
+                                    <td id="golesconecu">0</td>
+                                    <td id="difgolecu">0</td>
+                                </tr>
+                                <tr>
+                                    <td>Senegal</th>
+                                    <td id="ptossen">0</td>
+                                    <td id="golessen">0</td>
+                                    <td id="golesconsen">0</td>
+                                    <td id="difgolsen">0</td>
+                                </tr>
+                                <tr>
+                                    <td>Paises Bajos</th>
+                                    <td id="ptospbj">0</td>
+                                    <td id="golespbj">0</td>
+                                    <td id="golesconpbj">0</td>
+                                    <td id="difgolpbj">0</td>
+                                </tr>
+                            </tbody>
+                    </table>
+                </div>
+        </div>
+<!-- GRUPO B -->
+        <h2>GRUPO B</h2>
+        <div id="grupoB">
+            <div class="partidos">
+<!-- PRIMERA FECHA GRUPO B-->
+                <section class="primerafecha seccion__inicial">
+                    <h2>Primera Fecha</h2>
+                    <div class="primerPartido">
+                    <div class="izquierdo">
+                        <figure><img src="./imagenes/inglaterra.png" alt="escudinglaterra"><figcaption>Inglaterra</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoLocal7" id="equipoLocal7" data-id="7" placeholder="0">
+                        <input type="text" name="teamlocal7" id="teamlocal7" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    <div class="derecho">
+                        <figure><img src="./imagenes/iran.png" alt="escudoiran"><figcaption>Iran</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoVisitante7" id="equipoVisitante7" data-id="7" placeholder="0">
+                        <input type="text" name="teamvisita7" id="teamvisita7" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    </div>
+                    <div class="segundoPartido">
+                    <div class="izquierdo">
+                        <figure><img src="./imagenes/eeuu.png" alt="escudoeeuu"><figcaption>Estados Unidos</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoLocal8" id="equipoLocal8" data-id="8" placeholder="0">
+                        <input type="text" name="teamlocal8" id="teamlocal8" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    <div class="derecho">
+                        <figure><img src="./imagenes/gales.png" alt="escudogales"><figcaption>Gales</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoVisitante8" id="equipoVisitante8" data-id="8" placeholder="0">
+                        <input type="text" name="teamvisita8" id="teamvisita8" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    </div>
+                </section>
+<!-- SEGUNDA FECHA GRUPO B-->
+                <section class="segundafecha seccion__inicial">
+                    <h2>Segunda Fecha</h2>
+                    <div class="tercerPartido">
+                    <div class="izquierdo">
+                        <figure><img src="./imagenes/gales.png" alt="escudogales"><figcaption>Gales</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoLocal9" id="equipoLocal9" data-id="9" placeholder="0">
+                        <input type="text" name="teamlocal9" id="teamlocal9" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    <div class="derecho">
+                        <figure><img src="./imagenes/iran.png" alt="escudoiran"><figcaption>Iran</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoVisitante9" id="equipoVisitante9" data-id="9" placeholder="0">
+                        <input type="text" name="teamvisita9" id="teamvisita9" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    </div>
+                    <div class="cuartoPartido">
+                        <div class="izquierdo">
+                        <figure><img src="./imagenes/eeuu.png" alt="escudoeeuu"><figcaption>Estados Unidos</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoLocal10" id="equipoLocal10" data-id="10" placeholder="0"></td>
+                        <input type="text" name="teamlocal10" id="teamlocal10" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                        <div class="derecho">
+                        <figure><img src="./imagenes/inglaterra.png" alt="escudinglaterra"><figcaption>Inglaterra</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoVisitante10" id="equipoVisitante10" data-id="10" placeholder="0">
+                        <input type="text" name="teamvisita10" id="teamvisita10" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                    </div>
+                    </section>
+<!-- TERCERA FECHA GRUPO B-->
+                <section class="tercerafecha seccion__inicial">
+                <h2>Tercera Fecha</h2>
+                <div class="quintoPartido">
+                <div class="izquierdo">
+                    <figure><img src="./imagenes/gales.png" alt="escudogales"><figcaption>Gales</figcaption></figure>
+                    <input class="inputResultado" type="text" name="equipoLocal11" id="equipoLocal11" data-id="11" placeholder="0">
+                    <input type="text" name="teamlocal11" id="teamlocal11" class="desaparecer" placeholder="0" readonly>
+                </div>
+                <div class="derecho">
+                    <figure><img src="./imagenes/inglaterra.png" alt="escudinglaterra"><figcaption>Inglaterra</figcaption></figure>
+                    <input class="inputResultado" type="text" name="equipoVisitante11" id="equipoVisitante11" data-id="11" placeholder="0">
+                    <input type="text" name="teamvisita11" id="teamvisita11" class="desaparecer" placeholder="0" readonly>
+                </div>
+                </div>
+                <div class="sextoPartido">
+                <div class="izquierdo">    
+                    <figure><img src="./imagenes/iran.png" alt="escudoiran"><figcaption>Iran</figcaption></figure>
+                    <input class="inputResultado" type="text" name="equipoLocal12" id="equipoLocal12" data-id="12" placeholder="0">
+                    <td><input type="text" name="teamlocal12" id="teamlocal12" class="desaparecer" placeholder="0" readonly>
+                </div>
+                <div class="derecho">
+                    <figure><img src="./imagenes/eeuu.png" alt="escudoeeuu"><figcaption>Estados Unidos</figcaption></figure>
+                    <input class="inputResultado" type="text" name="equipoVisitante12" id="equipoVisitante12" data-id="12" placeholder="0">
+                    <input type="text" name="teamvisita12" id="teamvisita12" class="desaparecer" placeholder="0" readonly>
+                </div>
+                </div>
+                </section>
+            </div>
+<!-- TABLA POSICIONES GRUPO B -->
+            <div>
+            <table class="tabla">
+                <tbody class="tablaPosiciones">
+                    <tr>
+                        <th></th>
+                        <th>PTOS</th>
+                        <th>GF</th>
+                        <th>GC</th>
+                        <th>DIF</th>
+                    </tr>
+                    <tr>
+                        <td>Inglaterra</th>
+                        <td id="ptosing">0</td>
+                        <td id="golesing">0</td>
+                        <td id="golesconing">0</td>
+                        <td id="difgoling">0</td>
+                    </tr>
+                    <tr>
+                        <td>Iran</th>
+                        <td id="ptosira">0</td>
+                        <td id="golesira">0</td>
+                        <td id="golesconira">0</td>
+                        <td id="difgolira">0</td>
+                    </tr>
+                    <tr>
+                        <td>Gales</th>
+                        <td id="ptosgal">0</td>
+                        <td id="golesgal">0</td>
+                        <td id="golescongal">0</td>
+                        <td id="difgolgal">0</td>
+                    </tr>
+                    <tr>
+                        <td>Estados Unidos</th>
+                        <td id="ptosusa">0</td>
+                        <td id="golesusa">0</td>
+                        <td id="golesconusa">0</td>
+                        <td id="difgolusa">0</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+<!-- GRUPO C -->
+        <h2>GRUPO C</h2>
+        <div id="grupoC">
+            <div class="partidos">
+<!-- PRIMERA FECHA GRUPO C-->
+                <section class="primerafecha seccion__inicial">
+                <h2>Primera Fecha</h2>
+                    <div class="primerPartido">
+                        <div class="izquierdo">
+                            <figure><img src="./imagenes/arg.png" alt="escudoargentina"><figcaption>Argentina</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoLocal13" id="equipoLocal13" data-id="13" placeholder="0">
+                            <input type="text" name="teamlocal13" id="teamlocal13" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                        <div class="derecho">
+                            <figure><img src="./imagenes/ars.png" alt="escudoarabia"><figcaption>A. Saudita</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoVisitante13" id="equipoVisitante13" data-id="13" placeholder="0">
+                            <input type="text" name="teamvisita13" id="teamvisita13" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                    </div>
+                    <div class="segundoPartido">
+                        <div class="izquierdo">
+                            <figure><img src="./imagenes/mex.png" alt="escudomexico"><figcaption>Mexico</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoLocal14" id="equipoLocal14" data-id="14" placeholder="0">
+                            <input type="text" name="teamlocal14" id="teamlocal14" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                        <div class="derecho">
+                            <figure><img src="./imagenes/pol.png" alt="escudopolonia"><figcaption>Polonia</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoVisitante14" id="equipoVisitante14" data-id="14" placeholder="0">
+                            <input type="text" name="teamvisita14" id="teamvisita14" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                    </div>
+                </section>
+<!-- SEGUNDA FECHA GRUPO C-->
+                <section class="segundafecha seccion__inicial">
+                <h2>Segunda Fecha</h2>
+                    <div class="tercerPartido">
+                        <div class="izquierdo">
+                            <figure><img src="./imagenes/arg.png" alt="escudoargentina"><figcaption>Argentina</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoLocal15" id="equipoLocal15" data-id="15" placeholder="0">
+                            <input type="text" name="teamlocal15" id="teamlocal15" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                        <div class="derecho">
+                            <figure><img src="./imagenes/mex.png" alt="banderamexico"><figcaption>Mexico</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoVisitante15" id="equipoVisitante15" data-id="15" placeholder="0">
+                            <input type="text" name="teamvisita15" id="teamvisita15" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                    </div>
+                    <div class="cuartoPartido">
+                        <div class="izquierdo">
+                            <figure><img src="./imagenes/ars.png"alt="escudoarabia"><figcaption>A. Saudita</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoLocal16" id="equipoLocal16" data-id="16" placeholder="0"></td>
+                            <input type="text" name="teamlocal16" id="teamlocal16" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                        <div class="derecho">
+                            <figure><img src="./imagenes/pol.png" alt="escudopolonia"><figcaption>Polonia</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoVisitante16" id="equipoVisitante16" data-id="16" placeholder="0">
+                            <input type="text" name="teamvisita16" id="teamvisita16" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                    </div>
+                </section>
+<!-- TERCERA FECHA GRUPO C-->
+                <section class="tercerafecha seccion__inicial">
+                <h2>Tercera Fecha</h2>
+                    <div class="quintoPartido">
+                        <div class="izquierdo">
+                            <figure><img src="./imagenes/arg.png" alt="escudoargentina"><figcaption>Argentina</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoLocal17" id="equipoLocal17" data-id="17" placeholder="0">
+                            <input type="text" name="teamlocal17" id="teamlocal17" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                        <div class="derecho">
+                            <figure><img src="./imagenes/pol.png" alt="escudopolonia"><figcaption>Polonia</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoVisitante17" id="equipoVisitante17" data-id="17" placeholder="0">
+                            <input type="text" name="teamvisita17" id="teamvisita17" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                    </div>
+                    <div class="sextoPartido">
+                        <div class="izquierdo">    
+                            <figure><img src="./imagenes/mex.png" alt="escudomexico"><figcaption>Mexico</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoLocal18" id="equipoLocal18" data-id="18" placeholder="0">
+                            <td><input type="text" name="teamlocal18" id="teamlocal18" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                        <div class="derecho">
+                            <figure><img src="./imagenes/ars.png" alt="escudoarabia"><figcaption>A. Saudita</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoVisitante18" id="equipoVisitante18" data-id="18" placeholder="0">
+                            <input type="text" name="teamvisita18" id="teamvisita18" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                    </div>
+                </section>
+            </div>
+<!-- TABLA POSICIONES GRUPO C -->
+                <div>
+                    <table class="tabla">
+                        <tbody class="tablaPosiciones">
+                            <tr>
+                                <th></th>
+                                <th>PTOS</th>
+                                <th>GF</th>
+                                <th>GC</th>
+                                <th>DIF</th>
+                            </tr>
+                            <tr>
+                                <td>Argentina</th>
+                                <td id="ptosarg">0</td>
+                                <td id="golesarg">0</td>
+                                <td id="golesconarg">0</td>
+                                <td id="difgolarg">0</td>
+                            </tr>
+                            <tr>
+                                <td>Arabia Saudita</th>
+                                <td id="ptosars">0</td>
+                                <td id="golesars">0</td>
+                                <td id="golesconars">0</td>
+                                <td id="difgolars">0</td>
+                            </tr>
+                            <tr>
+                                <td>Mexico</th>
+                                <td id="ptosmex">0</td>
+                                <td id="golesmex">0</td>
+                                <td id="golesconmex">0</td>
+                                <td id="difgolmex">0</td>
+                            </tr>
+                            <tr>
+                                <td>Polonia</th>
+                                <td id="ptospol">0</td>
+                                <td id="golespol">0</td>
+                                <td id="golesconpol">0</td>
+                                <td id="difgolpol">0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            
+        </div>
+<!-- GRUPO D -->
+        <div id="grupoD">
+        <h2>GRUPO D</h2>
+            <div class="partidos">
+<!-- PRIMERA FECHA GRUPO D-->
+            <section class="primerafecha seccion__inicial">
+                <h2>Primera Fecha</h2>
+                <div class="primerPartido">
+                <div class="izquierdo">
+                    <figure><img src="./imagenes/francia.png" alt="escudoFrancia"><figcaption>Francia</figcaption></figure>
+                    <input class="inputResultado" type="text" name="equipoLocal19" id="equipoLocal19" data-id="19" placeholder="0">
+                    <input type="text" name="teamlocal19" id="teamlocal19" class="desaparecer" placeholder="0" readonly>
+                </div>
+                <div class="derecho">
+                    <figure><img src="./imagenes/australia.png" alt="escudoAustralia"><figcaption>Australia</figcaption></figure>
+                    <input class="inputResultado" type="text" name="equipoVisitante19" id="equipoVisitante19" data-id="19" placeholder="0">
+                    <input type="text" name="teamvisita19" id="teamvisita19" class="desaparecer" placeholder="0" readonly>
+                </div>
+                </div>
+                <div class="segundoPartido">
+                <div class="izquierdo">
+                    <figure><img src="./imagenes/dinam.png" alt="escudoDinamarca"><figcaption>Dinamarca</figcaption></figure>
+                    <input class="inputResultado" type="text" name="equipoLocal20" id="equipoLocal20" data-id="20" placeholder="0">
+                    <input type="text" name="teamlocal20" id="teamlocal20" class="desaparecer" placeholder="0" readonly>
+                </div>
+                <div class="derecho">
+                    <figure><img src="./imagenes/tunez.png" alt="escudoTunez"><figcaption>Tunez</figcaption></figure>
+                    <input class="inputResultado" type="text" name="equipoVisitante20" id="equipoVisitante20" data-id="20" placeholder="0">
+                    <input type="text" name="teamvisita20" id="teamvisita20" class="desaparecer" placeholder="0" readonly>
+                </div>
+                </div>
+            </section>
+<!-- SEGUNDA FECHA GRUPO D-->
+            <section class="segundafecha seccion__inicial">
+                <h2>Segunda Fecha</h2>
+                <div class="tercerPartido">
+                <div class="izquierdo">
+                    <figure><img src="./imagenes/tunez.png" alt="escudoTunez"><figcaption>Tunez</figcaption></figure>
+                    <input class="inputResultado" type="text" name="equipoLocal21" id="equipoLocal21" data-id="21" placeholder="0">
+                    <input type="text" name="teamlocal21" id="teamlocal21" class="desaparecer" placeholder="0" readonly>
+                </div>
+                <div class="derecho">
+                    <figure><img src="./imagenes/australia.png" alt="escudoAustralia"><figcaption>Australia</figcaption></figure>
+                    <input class="inputResultado" type="text" name="equipoVisitante21" id="equipoVisitante21" data-id="21" placeholder="0">
+                    <input type="text" name="teamvisita21" id="teamvisita21" class="desaparecer" placeholder="0" readonly>
+                </div>
+                </div>
+                <div class="cuartoPartido">
+                    <div class="izquierdo">
+                    <figure><img src="./imagenes/francia.png" alt="escudoFrancia"><figcaption>Francia</figcaption></figure>
+                    <input class="inputResultado" type="text" name="equipoLocal22" id="equipoLocal22" data-id="22" placeholder="0"></td>
+                    <input type="text" name="teamlocal22" id="teamlocal22" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    <div class="derecho">
+                    <figure><img src="./imagenes/dinam.png" alt="escudoDinamarca"><figcaption>Dinamarca</figcaption></figure>
+                    <input class="inputResultado" type="text" name="equipoVisitante22" id="equipoVisitante22" data-id="22" placeholder="0">
+                    <input type="text" name="teamvisita22" id="teamvisita22" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                </div>
+            </section>
+<!-- TERCERA FECHA GRUPO D-->
+            <section class="tercerafecha seccion__inicial">
+                <h2>Tercera Fecha</h2>
+                <div class="quintoPartido">
+                <div class="izquierdo">
+                    <figure><img src="./imagenes/australia.png" alt="escudoAustralia"><figcaption>Australia</figcaption></figure>
+                    <input class="inputResultado" type="text" name="equipoLocal23" id="equipoLocal23" data-id="23" placeholder="0">
+                    <input type="text" name="teamlocal23" id="teamlocal23" class="desaparecer" placeholder="0" readonly>
+                </div>
+                <div class="derecho">
+                    <figure><img src="./imagenes/dinam.png" alt="escudoDinamarca"><figcaption>Dinamarca</figcaption></figure>
+                    <input class="inputResultado" type="text" name="equipoVisitante23" id="equipoVisitante23" data-id="23" placeholder="0">
+                    <input type="text" name="teamvisita23" id="teamvisita23" class="desaparecer" placeholder="0" readonly>
+                </div>
+                </div>
+                <div class="sextoPartido">
+                <div class="izquierdo">    
+                    <figure><img src="./imagenes/tunez.png" alt="escudoTunez"><figcaption>Tunez</figcaption></figure>
+                    <input class="inputResultado"type="text" name="equipoLocal24" id="equipoLocal24" data-id="24" placeholder="0">
+                    <input type="text" name="teamlocal24" id="teamlocal24" class="desaparecer" placeholder="0" readonly>
+                </div>
+                <div class="derecho">
+                    <figure><img src="./imagenes/francia.png" alt="escudoFrancia"><figcaption>Francia</figcaption></figure>
+                    <input class="inputResultado" type="text" name="equipoVisitante24" id="equipoVisitante24" data-id="24" placeholder="0">
+                    <input type="text" name="teamvisita24" id="teamvisita24" class="desaparecer" placeholder="0" readonly>
+                </div>
+                </div>
+            </section>
+            </div>
+<!-- TABLA POSICIONES GRUPO D -->
+            <div>
+            <table class="tabla">
+                    <tbody class="tablaPosiciones">
+                        <tr>
+                            <th></th>
+                            <th>PTOS</th>
+                            <th>GF</th>
+                            <th>GC</th>
+                            <th>DIF</th>
+                        </tr>
+                        <tr>
+                            <td>Francia</th>
+                            <td id="ptosfra">0</td>
+                            <td id="golesfra">0</td>
+                            <td id="golesconfra">0</td>
+                            <td id="difgolfra">0</td>
+                        </tr>
+                        <tr>
+                            <td>Australia</th>
+                            <td id="ptosaus">0</td>
+                            <td id="golesaus">0</td>
+                            <td id="golesconaus">0</td>
+                            <td id="difgolaus">0</td>
+                        </tr>
+                        <tr>
+                            <td>Dinamarca</th>
+                            <td id="ptosdin">0</td>
+                            <td id="golesdin">0</td>
+                            <td id="golescondin">0</td>
+                            <td id="difgoldin">0</td>
+                        </tr>
+                        <tr>
+                            <td>Tunez</th>
+                            <td id="ptostun">0</td>
+                            <td id="golestun">0</td>
+                            <td id="golescontun">0</td>
+                            <td id="difgoltun">0</td>
+                        </tr>
+                    </tbody>
+            </table>
+            </div>
+        </div>
+<!-- GRUPO E -->
+        <h2>GRUPO E</h2>
+        <div id="grupoE">
+            <div class="partidos">
+                <!-- PRIMERA FECHA GRUPO E-->
+                <section class="primerafecha seccion__inicial">
+                    <h2>Primera Fecha</h2>
+                    <div class="primerPartido">
+                    <div class="izquierdo">
+                        <figure><img src="./imagenes/alemania.png" alt="escudo Alemania"><figcaption>Alemania</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoLocal25" id="equipoLocal25" data-id="25" placeholder="0">
+                        <input type="text" name="teamlocal25" id="teamlocal25" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    <div class="derecho">
+                        <figure><img src="./imagenes/japon.png" alt="escudo japon"><figcaption>Japon</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoVisitante25" id="equipoVisitante25" data-id="25" placeholder="0">
+                        <input type="text" name="teamvisita25" id="teamvisita25" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    </div>
+                    <div class="segundoPartido">
+                    <div class="izquierdo">
+                        <figure><img src="./imagenes/españa.png" alt="escudo España"><figcaption>España</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoLocal26" id="equipoLocal26" data-id="26" placeholder="0">
+                        <input type="text" name="teamlocal26" id="teamlocal26" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    <div class="derecho">
+                        <figure><img src="./imagenes/costarica.png" alt="escudo Costa Rica"><figcaption>Costa Rica</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoVisitante26" id="equipoVisitante26" data-id="26" placeholder="0">
+                        <input type="text" name="teamvisita26" id="teamvisita26" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    </div>
+                </section>
+<!-- SEGUNDA FECHA GRUPO E-->
+                <section class="segundafecha seccion__inicial">
+                    <h2>Segunda Fecha</h2>
+                    <div class="tercerPartido">
+                    <div class="izquierdo">
+                        <figure><img src="./imagenes/españa.png" alt="escudo España"><figcaption>España</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoLocal27" id="equipoLocal27" data-id="27" placeholder="0">
+                        <input type="text" name="teamlocal27" id="teamlocal27" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    <div class="derecho">
+                        <figure><img src="./imagenes/alemania.png" alt="escudo Alemania"><figcaption>Alemania</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoVisitante27" id="equipoVisitante27" data-id="27" placeholder="0">
+                        <input type="text" name="teamvisita27" id="teamvisita27" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    </div>
+                    <div class="cuartoPartido">
+                        <div class="izquierdo">
+                            <figure><img src="./imagenes/costarica.png" alt="escudo Costa Rica"><figcaption>Costa Rica</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoLocal28" id="equipoLocal28" data-id="28" placeholder="0"></td>
+                            <input type="text" name="teamlocal28" id="teamlocal28" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                        <div class="derecho">
+                            <figure><img src="./imagenes/japon.png" alt="escudo japon"><figcaption>Japon</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoVisitante28" id="equipoVisitante28" data-id="28" placeholder="0">
+                            <input type="text" name="teamvisita28" id="teamvisita28" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                    </div>
+                </section>
+<!-- TERCERA FECHA GRUPO E-->
+                <section class="tercerafecha seccion__inicial">
+                    <h2>Tercera Fecha</h2>
+                    <div class="quintoPartido">
+                        <div class="izquierdo">
+                            <figure><img src="./imagenes/españa.png" alt="escudo España"><figcaption>España</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoLocal29" id="equipoLocal29" data-id="29" placeholder="0">
+                            <input type="text" name="teamlocal29" id="teamlocal29" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                        <div class="derecho">
+                            <figure><img src="./imagenes/japon.png" alt="escudo Japon"><figcaption>Japon</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoVisitante29" id="equipoVisitante29" data-id="29" placeholder="0">
+                            <input type="text" name="teamvisita29" id="teamvisita29" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                    </div>
+                    <div class="sextoPartido">
+                        <div class="izquierdo">    
+                            <figure><img src="./imagenes/costarica.png" alt="escudo Costa Rica"><figcaption>Costa Rica</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoLocal30" id="equipoLocal30" data-id="30" placeholder="0">
+                            <td><input type="text" name="teamlocal30" id="teamlocal30" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                        <div class="derecho">
+                            <figure><img src="./imagenes/alemania.png" alt="escudo Alemania"><figcaption>Alemania</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoVisitante30" id="equipoVisitante30" data-id="30" placeholder="0">
+                            <input type="text" name="teamvisita30" id="teamvisita30" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                    </div>
+                </section>
+            </div>
+<!-- TABLA POSICIONES GRUPO E -->
+            <div>
+                    <table class="tabla">
+                            <tbody class="tablaPosiciones">
+                                <tr>
+                                    <th></th>
+                                    <th>PTOS</th>
+                                    <th>GF</th>
+                                    <th>GC</th>
+                                    <th>DIF</th>
+                                </tr>
+                                <tr>
+                                    <td>España</th>
+                                    <td id="ptosesp">0</td>
+                                    <td id="golesesp">0</td>
+                                    <td id="golesconesp">0</td>
+                                    <td id="difgolesp">0</td>
+                                </tr>
+                                <tr>
+                                    <td>Costa Rica</th>
+                                    <td id="ptoscra">0</td>
+                                    <td id="golescra">0</td>
+                                    <td id="golesconcra">0</td>
+                                    <td id="difgolcra">0</td>
+                                </tr>
+                                <tr>
+                                    <td>Alemania</th>
+                                    <td id="ptosale">0</td>
+                                    <td id="golesale">0</td>
+                                    <td id="golesconale">0</td>
+                                    <td id="difgolale">0</td>
+                                </tr>
+                                <tr>
+                                    <td>Japon</th>
+                                    <td id="ptosjap">0</td>
+                                    <td id="golesjap">0</td>
+                                    <td id="golesconjap">0</td>
+                                    <td id="difgoljap">0</td>
+                                </tr>
+                            </tbody>
+                    </table>
+                </div>
+        </div>
+<!-- GRUPO F -->
+        <h2>GRUPO F</h2>
+        <div id="grupoF">
+            <div class="partidos">
+<!-- PRIMERA FECHA GRUPO F-->
+                <section class="primerafecha seccion__inicial">
+                    <h2>Primera Fecha</h2>
+                    <div class="primerPartido">
+                    <div class="izquierdo">
+                        <figure><img src="./imagenes/marruecos.png" alt="escudo Marruecos"><figcaption>Marruecos</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoLocal31" id="equipoLocal31" data-id="31" placeholder="0">
+                        <input type="text" name="teamlocal31" id="teamlocal31" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    <div class="derecho">
+                        <figure><img src="./imagenes/croacia.png" alt="escudo Croacia"><figcaption>Croacia</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoVisitante31" id="equipoVisitante31" data-id="31" placeholder="0">
+                        <input type="text" name="teamvisita31" id="teamvisita31" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    </div>
+                    <div class="segundoPartido">
+                    <div class="izquierdo">
+                        <figure><img src="./imagenes/belgica.png" alt="escudo Belgica"><figcaption>Belgica</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoLocal32" id="equipoLocal32" data-id="32" placeholder="0">
+                        <input type="text" name="teamlocal32" id="teamlocal32" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    <div class="derecho">
+                        <figure><img src="./imagenes/canada.png" alt="escudo Canada"><figcaption>Canada</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoVisitante32" id="equipoVisitante32" data-id="32" placeholder="0">
+                        <input type="text" name="teamvisita32" id="teamvisita32" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    </div>
+                </section>
+<!-- SEGUNDA FECHA GRUPO F-->
+                <section class="segundafecha seccion__inicial">
+                    <h2>Segunda Fecha</h2>
+                    <div class="tercerPartido">
+                    <div class="izquierdo">
+                        <figure><img src="./imagenes/belgica.png" alt="escudo Belgica"><figcaption>Belgica</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoLocal33" id="equipoLocal33" data-id="33" placeholder="0">
+                        <input type="text" name="teamlocal33" id="teamlocal33" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    <div class="derecho">
+                        <figure><img src="./imagenes/marruecos.png" alt="escudo Marruecos"><figcaption>Marruecos</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoVisitante33" id="equipoVisitante33" data-id="33" placeholder="0">
+                        <input type="text" name="teamvisita33" id="teamvisita33" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    </div>
+                    <div class="cuartoPartido">
+                        <div class="izquierdo">
+                            <figure><img src="./imagenes/croacia.png" alt="escudo Croacia"><figcaption>Croacia</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoLocal34" id="equipoLocal34" data-id="34" placeholder="0"></td>
+                            <input type="text" name="teamlocal34" id="teamlocal34" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                        <div class="derecho">
+                            <figure><img src="./imagenes/canada.png" alt="escudo Canada"><figcaption>Canada</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoVisitante34" id="equipoVisitante34" data-id="34" placeholder="0">
+                            <input type="text" name="teamvisita34" id="teamvisita34" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                    </div>
+                </section>
+<!-- TERCERA FECHA GRUPO F-->
+                <section class="tercerafecha seccion__inicial">
+                    <h2>Tercera Fecha</h2>
+                    <div class="quintoPartido">
+                        <div class="izquierdo">
+                            <figure><img src="./imagenes/croacia.png" alt="escudo Croacia"><figcaption>Croacia</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoLocal35" id="equipoLocal35" data-id="35" placeholder="0">
+                            <input type="text" name="teamlocal35" id="teamlocal35" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                        <div class="derecho">
+                            <figure><img src="./imagenes/belgica.png" alt="escudo Belgica"><figcaption>Belgica</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoVisitante35" id="equipoVisitante35" data-id="35" placeholder="0">
+                            <input type="text" name="teamvisita35" id="teamvisita35" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                    </div>
+                    <div class="sextoPartido">
+                        <div class="izquierdo">    
+                            <figure><img src="./imagenes/canada.png" alt="escudo Canada"><figcaption>Canada</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoLocal36" id="equipoLocal36" data-id="36" placeholder="0">
+                            <td><input type="text" name="teamlocal36" id="teamlocal36" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                        <div class="derecho">
+                            <figure><img src="./imagenes/marruecos.png" alt="escudo Marruecos"><figcaption>Marruecos</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoVisitante36" id="equipoVisitante36" data-id="36" placeholder="0">
+                            <input type="text" name="teamvisita36" id="teamvisita36" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                    </div>
+                </section>
+            </div>
+<!-- TABLA POSICIONES GRUPO F -->
+            <div>
+                    <table class="tabla">
+                            <tbody class="tablaPosiciones">
+                                <tr>
+                                    <th></th>
+                                    <th>PTOS</th>
+                                    <th>GF</th>
+                                    <th>GC</th>
+                                    <th>DIF</th>
+                                </tr>
+                                <tr>
+                                    <td>Belgica</th>
+                                    <td id="ptosbel">0</td>
+                                    <td id="golesbel">0</td>
+                                    <td id="golesconbel">0</td>
+                                    <td id="difgolbel">0</td>
+                                </tr>
+                                <tr>
+                                    <td>Canada</th>
+                                    <td id="ptoscan">0</td>
+                                    <td id="golescan">0</td>
+                                    <td id="golesconcan">0</td>
+                                    <td id="difgolcan">0</td>
+                                </tr>
+                                <tr>
+                                    <td>Marruecos</th>
+                                    <td id="ptosmar">0</td>
+                                    <td id="golesmar">0</td>
+                                    <td id="golesconmar">0</td>
+                                    <td id="difgolmar">0</td>
+                                </tr>
+                                <tr>
+                                    <td>Croacia</th>
+                                    <td id="ptoscro">0</td>
+                                    <td id="golescro">0</td>
+                                    <td id="golesconcro">0</td>
+                                    <td id="difgolcro">0</td>
+                                </tr>
+                            </tbody>
+                    </table>
+                </div>
+        </div>
+<!-- GRUPO G -->
+        <h2>GRUPO G</h2>
+        <div id="grupoG">
+            <div class="partidos">
+<!-- PRIMERA FECHA GRUPO G-->
+                <section class="primerafecha seccion__inicial">
+                    <h2>Primera Fecha</h2>
+                    <div class="primerPartido">
+                    <div class="izquierdo">
+                        <figure><img src="./imagenes/suiaza.png" alt="escudo Suiza"><figcaption>Suiza</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoLocal37" id="equipoLocal37" data-id="37" placeholder="0">
+                        <input type="text" name="teamlocal37" id="teamlocal37" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    <div class="derecho">
+                        <figure><img src="./imagenes/camerun.png" alt="escudo Camerun"><figcaption>Camerun</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoVisitante37" id="equipoVisitante37" data-id="37" placeholder="0">
+                        <input type="text" name="teamvisita37" id="teamvisita37" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    </div>
+                    <div class="segundoPartido">
+                    <div class="izquierdo">
+                        <figure><img src="./imagenes/brasil.png" alt="escudo Brasil"><figcaption>Brasil</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoLocal38" id="equipoLocal38" data-id="38" placeholder="0">
+                        <input type="text" name="teamlocal38" id="teamlocal38" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    <div class="derecho">
+                        <figure><img src="./imagenes/serbia.png" alt="escudo Serbia"><figcaption>Serbia</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoVisitante38" id="equipoVisitante38" data-id="38" placeholder="0">
+                        <input type="text" name="teamvisita38" id="teamvisita38" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    </div>
+                </section>
+<!-- SEGUNDA FECHA GRUPO G-->
+                <section class="segundafecha seccion__inicial">
+                    <h2>Segunda Fecha</h2>
+                    <div class="tercerPartido">
+                    <div class="izquierdo">
+                        <figure><img src="./imagenes/camerun.png" alt="escudo Camerun"><figcaption>Camerun</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoLocal39" id="equipoLocal39" data-id="39" placeholder="0">
+                        <input type="text" name="teamlocal39" id="teamlocal39" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    <div class="derecho">
+                        <figure><img src="./imagenes/serbia.png" alt="escudo Serbia"><figcaption>Serbia</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoVisitante39" id="equipoVisitante39" data-id="39" placeholder="0">
+                        <input type="text" name="teamvisita39" id="teamvisita39" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    </div>
+                    <div class="cuartoPartido">
+                        <div class="izquierdo">
+                            <figure><img src="./imagenes/brasil.png" alt="escudo Brasil"><figcaption>Brasil</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoLocal40" id="equipoLocal40" data-id="40" placeholder="0"></td>
+                            <input type="text" name="teamlocal40" id="teamlocal40" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                        <div class="derecho">
+                            <figure><img src="./imagenes/suiaza.png" alt="escudo Suiza"><figcaption>Suiza</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoVisitante40" id="equipoVisitante40" data-id="40" placeholder="0">
+                            <input type="text" name="teamvisita40" id="teamvisita40" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                    </div>
+                </section>
+<!-- TERCERA FECHA GRUPO G-->
+                <section class="tercerafecha seccion__inicial">
+                    <h2>Tercera Fecha</h2>
+                    <div class="quintoPartido">
+                        <div class="izquierdo">
+                            <figure><img src="./imagenes/camerun.png" alt="escudo Camerun"><figcaption>Camerun</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoLocal41" id="equipoLocal41" data-id="41" placeholder="0">
+                            <input type="text" name="teamlocal41" id="teamlocal41" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                        <div class="derecho">
+                            <figure><img src="./imagenes/brasil.png" alt="escudo Brasil"><figcaption>Brasil</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoVisitante41" id="equipoVisitante41" data-id="41" placeholder="0">
+                            <input type="text" name="teamvisita41" id="teamvisita41" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                    </div>
+                    <div class="sextoPartido">
+                        <div class="izquierdo">    
+                            <figure><img src="./imagenes/serbia.png" alt="escudo Serbia"><figcaption>Serbia</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoLocal42" id="equipoLocal42" data-id="42" placeholder="0">
+                            <td><input type="text" name="teamlocal42" id="teamlocal42" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                        <div class="derecho">
+                            <figure><img src="./imagenes/suiaza.png" alt="escudo Suiza"><figcaption>Suiza</figcaption></figure>
+                            <input class="inputResultado" type="text" name="equipoVisitante42" id="equipoVisitante42" data-id="42" placeholder="0">
+                            <input type="text" name="teamvisita42" id="teamvisita42" class="desaparecer" placeholder="0" readonly>
+                        </div>
+                    </div>
+                </section>
+            </div>
+<!-- TABLA POSICIONES GRUPO G -->
+            <div>
+                    <table class="tabla">
+                            <tbody class="tablaPosiciones">
+                                <tr>
+                                    <th></th>
+                                    <th>PTOS</th>
+                                    <th>GF</th>
+                                    <th>GC</th>
+                                    <th>DIF</th>
+                                </tr>
+                                <tr>
+                                    <td>Brasil</th>
+                                    <td id="ptosbra">0</td>
+                                    <td id="golesbra">0</td>
+                                    <td id="golesconbra">0</td>
+                                    <td id="difgolbra">0</td>
+                                </tr>
+                                <tr>
+                                    <td>Serbia</th>
+                                    <td id="ptosser">0</td>
+                                    <td id="golesser">0</td>
+                                    <td id="golesconser">0</td>
+                                    <td id="difgolser">0</td>
+                                </tr>
+                                <tr>
+                                    <td>Suiza</th>
+                                    <td id="ptossui">0</td>
+                                    <td id="golessui">0</td>
+                                    <td id="golesconsui">0</td>
+                                    <td id="difgolsui">0</td>
+                                </tr>
+                                <tr>
+                                    <td>Camerun</th>
+                                    <td id="ptoscam">0</td>
+                                    <td id="golescam">0</td>
+                                    <td id="golesconcam">0</td>
+                                    <td id="difgolcam">0</td>
+                                </tr>
+                            </tbody>
+                    </table>
+                </div>
+        </div>
+<!-- GRUPO H -->
+        <h2>GRUPO H</h2>
+        <div id="grupoH">
+            <div class="partidos">
+<!-- PRIMERA FECHA GRUPO H-->
+                <section class="primerafecha seccion__inicial">
+                    <h2>Primera Fecha</h2>
+                    <div class="primerPartido">
+                    <div class="izquierdo">
+                        <figure><img src="./imagenes/uruguay.png" alt="escudo Uruguay"><figcaption>Uruguay</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoLocal43" id="equipoLocal43" data-id="43" placeholder="0">
+                        <input type="text" name="teamlocal43" id="teamlocal43" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    <div class="derecho">
+                        <figure><img src="./imagenes/corea.png" alt="escudo Corea del Sur"><figcaption>Corea del Sur</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoVisitante43" id="equipoVisitante43" data-id="43" placeholder="0">
+                        <input type="text" name="teamvisita43" id="teamvisita43" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    </div>
+                    <div class="segundoPartido">
+                    <div class="izquierdo">
+                        <figure><img src="./imagenes/portugal.png" alt="escudo Portugal"><figcaption>Portugal</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoLocal44" id="equipoLocal44" data-id="44" placeholder="0">
+                        <input type="text" name="teamlocal44" id="teamlocal44" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    <div class="derecho">
+                        <figure><img src="./imagenes/ghana.png" alt="escudo Ghana"><figcaption>Ghana</figcaption></figure>
+                        <input class="inputResultado" type="text" name="equipoVisitante44" id="equipoVisitante44" data-id="44" placeholder="0">
+                        <input type="text" name="teamvisita44" id="teamvisita44" class="desaparecer" placeholder="0" readonly>
+                    </div>
+                    </div>
+                </section>
+<!-- SEGUNDA FECHA GRUPO H-->
+        <section class="segundafecha seccion__inicial">
+            <h2>Segunda Fecha</h2>
+            <div class="tercerPartido">
+            <div class="izquierdo">
+                <figure><img src="./imagenes/corea.png" alt="escudo Corea del Sur"><figcaption>Corea del Sur</figcaption></figure>
+                <input class="inputResultado" type="text" name="equipoLocal45" id="equipoLocal45" data-id="45" placeholder="0">
+                <input type="text" name="teamlocal45" id="teamlocal45" class="desaparecer" placeholder="0" readonly>
+            </div>
+            <div class="derecho">
+                <figure><img src="./imagenes/ghana.png" alt="escudo Ghana"><figcaption>Ghana</figcaption></figure>
+                <input class="inputResultado" type="text" name="equipoVisitante45" id="equipoVisitante45" data-id="45" placeholder="0">
+                <input type="text" name="teamvisita45" id="teamvisita45" class="desaparecer" placeholder="0" readonly>
+            </div>
+            </div>
+            <div class="cuartoPartido">
+                <div class="izquierdo">
+                    <figure><img src="./imagenes/portugal.png" alt="escudo Portugal"><figcaption>Portugal</figcaption></figure>
+                    <input class="inputResultado" type="text" name="equipoLocal46" id="equipoLocal46" data-id="46" placeholder="0"></td>
+                    <input type="text" name="teamlocal46" id="teamlocal46" class="desaparecer" placeholder="0" readonly>
+                </div>
+                <div class="derecho">
+                    <figure><img src="./imagenes/uruguay.png" alt="escudo Uruguay"><figcaption>Uruguay</figcaption></figure>
+                    <input class="inputResultado" type="text" name="equipoVisitante46" id="equipoVisitante46" data-id="46" placeholder="0">
+                    <input type="text" name="teamvisita46" id="teamvisita46" class="desaparecer" placeholder="0" readonly>
+                </div>
+            </div>
+        </section>
+<!-- TERCERA FECHA GRUPO H-->
+        <section class="tercerafecha seccion__inicial">
+            <h2>Tercera Fecha</h2>
+            <div class="quintoPartido">
+                <div class="izquierdo">
+                    <figure><img src="./imagenes/corea.png" alt="escudo Corea del Sur"><figcaption>Corea del Sur</figcaption></figure>
+                    <input class="inputResultado" type="text" name="equipoLocal47" id="equipoLocal47" data-id="47" placeholder="0">
+                    <input type="text" name="teamlocal47" id="teamlocal47" class="desaparecer" placeholder="0" readonly>
+                </div>
+                <div class="derecho">
+                    <figure><img src="./imagenes/portugal.png" alt="escudo Portugal"><figcaption>Portugal</figcaption></figure>
+                    <input class="inputResultado" type="text" name="equipoVisitante47" id="equipoVisitante47" data-id="47" placeholder="0">
+                    <input type="text" name="teamvisita47" id="teamvisita47" class="desaparecer" placeholder="0" readonly>
+                </div>
+            </div>
+            <div class="sextoPartido">
+                <div class="izquierdo">    
+                    <figure><img src="./imagenes/ghana.png" alt="escudo Ghana"><figcaption>Ghana</figcaption></figure>
+                    <input class="inputResultado" type="text" name="equipoLocal48" id="equipoLocal48" data-id="48" placeholder="0">
+                    <td><input type="text" name="teamlocal48" id="teamlocal48" class="desaparecer" placeholder="0" readonly>
+                </div>
+                <div class="derecho">
+                    <figure><img src="./imagenes/uruguay.png" alt="escudo Uruguay"><figcaption>Uruguay</figcaption></figure>
+                    <input class="inputResultado" type="text" name="equipoVisitante48" id="equipoVisitante48" data-id="48" placeholder="0">
+                    <input type="text" name="teamvisita48" id="teamvisita48" class="desaparecer" placeholder="0" readonly>
+                </div>
+            </div>
+        </section>
+    </div>
+<!-- TABLA POSICIONES GRUPO H -->
+    <div>
+            <table class="tabla">
+                    <tbody class="tablaPosiciones">
+                        <tr>
+                            <th></th>
+                            <th>PTOS</th>
+                            <th>GF</th>
+                            <th>GC</th>
+                            <th>DIF</th>
+                        </tr>
+                        <tr>
+                            <td>Portugal</th>
+                            <td id="ptospor">0</td>
+                            <td id="golespor">0</td>
+                            <td id="golesconpor">0</td>
+                            <td id="difgolpor">0</td>
+                        </tr>
+                        <tr>
+                            <td>Ghana</th>
+                            <td id="ptosgha">0</td>
+                            <td id="golesgha">0</td>
+                            <td id="golescongha">0</td>
+                            <td id="difgolgha">0</td>
+                        </tr>
+                        <tr>
+                            <td>Uruguay</th>
+                            <td id="ptosuru">0</td>
+                            <td id="golesuru">0</td>
+                            <td id="golesconuru">0</td>
+                            <td id="difgoluru">0</td>
+                        </tr>
+                        <tr>
+                            <td>Corea del Sur</th>
+                            <td id="ptoscds">0</td>
+                            <td id="golescds">0</td>
+                            <td id="golesconcds">0</td>
+                            <td id="difgolcds">0</td>
+                        </tr>
+                    </tbody>
+            </table>
+        </div>
+</div>
+    </main>
+  <footer>
+    <li class="nav-item"><a class="nav-link" href="./contactanos.html">Contacto</a></li>
+  </footer>
+  <script src="./carrito.js"></script>
+  <script src="./index.js"></script>
+  <script src="./registro.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.all.min.js"></script>
+</body>
+</html>

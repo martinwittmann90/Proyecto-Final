@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="En este pagina se puede simular los resultados del mundial para ver quien sale campeón"">
+  <meta name="keywords" content="Futbol, Mundial, Qatar 2022">
+  <meta name="robots" content="index"/>
+  <meta name="author" content="Martin Wittmann">
+  <meta property="og:title" content="El Simulador del Mundial!"/>
+  <meta property="og:type" content="En este pagina se puede simular los resultados del mundial para ver quien sale campeón">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="registro.js">
+  <link rel="stylesheet" href="index.js">
+  <link rel="stylesheet" href="carrito.js">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="icon" href="./imagenes/logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+  <title>Comprar Indumentaria</title>
+  <body>
+<!--CABECERA-->
+<!--CABECERA DESKTOP-->
+<header>
+  <section id="cabecera">
+    <div class="containerfluid">
+      <nav class="">
+        <ul class="nav">
+          <a class="cabeceraLogo" title="HOME" href="index.html"><img src="./imagenes/qatar.jpg" alt="logoqatar" /></a>
+          <li class="nav-item"><a class="nav-link" href="./fixture.html">Fixture</a></li>
+          <li class="nav-item"><a class="nav-link" href="./estadios.html">Estadios</a></li>
+          <li class="nav-item"><a class="nav-link" href="./simulador.html">Simulador</a></li>
+          <li><h1></h1></li>
+          <li>
+            <form>
+              <div class="remember">
+                <button><a href="./registro.html">Ingresá o registrate</a></button>
+                <label for="entername" type="hidden"></label>
+                <input id="entername" type="hidden" required /> 
+                <label for="email" type="hidden"></label>
+                <input  name="email" type="hidden" id="email" /> 
+                <input id="submitname" type="hidden" value="Ingresar" />
+              </div>
+              <div class="forget">
+                  <label for="forgetname"></label>
+                  <input id="forgetname" type="reset" value="Cambiar usuario" />
+              </div>
+            </form>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+<!--CABECERA MOBILE-->
+        <section id="hamburguesa">
+          <nav>
+            <div class="navbar">
+              <div class="container nav-container">
+                  <input class="checkbox" type="checkbox" name="MENU"/>
+                  <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                  </div>  
+                  <div class="logo">
+                    <a href="./index.html"><img src="./imagenes/logo.jpg" alt="logo"></a>
+                  </div>
+                  <div class="menu-items">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./fixture.html">Fixture</a></li>
+                    <li><a href="./estadios.html">Estadios</a></li>
+                    <li><a href="./simulador.html">Simulador de partidos</a></li>
+                    <li><a href="./ropa.html">Ropa</a></li>
+                    <li><a href="./contactanos.html">Contacto</a></li>
+                  </div>
+              </div>
+            </div>
+          </nav>
+        </section>
+      </header>
+<!--FIN CABECERA-->
+    <main>
+        <div class="container">
+            <div class="row">
+              <h1>Compra la ropa de los equipos que participan del mundial</h1>
+                <div id="items" class="col-sm-8 row"></div>
+                <aside class="col-sm-4">
+                    <h2>Carrito</h2>
+                    <ul id="carrito" class="list-group"></ul>
+                    <hr>
+                    <p class="text-right">Total: <span id="total"></span>&dollar;</p>
+                    <button id="boton-comprar" class="btn btn-success">Comprar</button>
+                    <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+                </aside>
+            </div>
+        </div>
+      </main>
+      <footer>
+        <li class="nav-item"><a class="nav-link" href="./contactanos.html">Contacto</a></li>
+      </footer>
+    <script src="./carrito.js"></script>
+    <script src="./index.js"></script>
+    <script src="./registro.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.all.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>

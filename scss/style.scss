@@ -1,0 +1,520 @@
+@import 'base/tipografias';
+@import 'utilities/listas';
+@import 'utilities/mixin';
+@import 'utilities/extends';
+@import 'components/botones';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/grid';
+@import 'layout/banner';
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;}
+
+/*HEADER*/
+#cabecera {
+    font-size: nth($tamaño-fuente,2);
+    border-bottom: 7px solid nth($colores,3);
+    background-color: nth($colores,2);
+    padding: 4vh 0px;
+    div {
+        background-color: nth($colores,2);
+        nav {
+            ul {
+                @extend %centralizador1;
+                li {
+                    a {
+                        color:nth($colores-fuente, 2);
+                        font-family: nth($fuentes, 2);
+                        font-size: nth($tamaño-fuente,3);
+                        &:hover {
+                            color:nth($colores-fuente, 3);
+                            transition: color 1s cubic-bezier(0.33, 1, 0.68, 1);
+                            animation: heartBeat;
+                            animation-duration: 5s; }}}}}}
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+            display: none;}}
+
+/* HEADER PARA DESKTOP */
+@media only screen and (min-width : 481px) {
+#hamburguesa {
+	display: none;}}
+header {
+    @extend %hamburguesa;}
+
+/*MAIN*/
+/*PRESENTACION SITIO WEB*/
+/*PAGINA TRABAJOS*/
+.cuerpotrabajos {
+    background-color: nth($colores,7);}
+.cuerpoimagenes {
+	margin-top: 16vh;
+	padding: 3vh 3vw;}
+.wrapper {
+	display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 0px;}
+#one {
+	grid-column: 1;
+	grid-row: 1;
+    border: solid #7585E2 1px;}
+#two {
+	grid-column:2;
+	grid-row: 1;
+    border: solid #7585E2 1px;}
+#three {
+	grid-column: 3;
+	grid-row: 1;
+    border: solid #7585E2 1px;}
+#four {
+	grid-column: 1;
+	grid-row: 2;
+    border: solid #7585E2 1px;}
+#five {
+	grid-column: 2;
+	grid-row: 2;
+    border: solid #7585E2 1px;}
+#six {
+	grid-column: 3;
+	grid-row: 2;
+    border: solid #7585E2 1px;}
+.caption__empresa {
+    color:nth($colores-fuente,1);
+    text-align: left;
+    font-family: nth($fuentes,2);
+    font-size: nth($tamaño-fuente,7);
+    padding: 0 0 0.5rem 2.5rem;}
+.caption__descripcion {
+    color:nth($colores-fuente,1);
+    text-align: left;
+    font-family: nth($fuentes,2);
+    font-size: nth($tamaño-fuente,2);
+    padding: 0 0 1rem 2.5rem;}
+.caption__referencia {
+    color:nth($colores-fuente,1);
+    text-align: left;
+    font-family: nth($fuentes,2);
+    font-size: nth($tamaño-fuente,3);
+    padding: 0 0 0rem 2.5rem;}
+main {
+    section {
+        div {
+            div {
+                img {
+                    padding: 1rem 2rem 0 2.5rem;}}}}}
+
+/*PAGINA TRABAJOS PARA CELULARES*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+	.wrapper {
+		display:block;
+		grid-gap: 10px;
+		padding: 10px;}}
+/* ZOOM IMAGENES */
+.img-hover-zoom {
+	height: 100%;
+	overflow: hidden;} 
+.img-hover-zoom--slowmo img {
+	transform-origin: 50% 65%;
+	transition: transform 5s, filter 3s ease-in-out;}
+.img-hover-zoom--slowmo:hover img {
+	transform: scale(1.1);}
+/*PAGINA FIXTURE*/
+.seccion__inicial {
+    padding: 1rem 2rem;
+    background-color: nth($colores,2);
+        h2 {
+            padding: 1rem;
+            color: nth($colores-fuente,3);
+            font-family: nth($fuentes,1);}
+            font-size: nth($tamaño-fuente,4);
+            @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+                h2 {
+                    padding: 2rem 1rem 1rem 0.5rem;
+                    text-align: left;
+            }}}
+.seccion__intermedia {
+    padding: 1rem 2rem;
+    background-color: nth($colores,7);
+        h2 {
+            padding: 1rem;
+            color: nth($colores-fuente,1);
+            font-family: nth($fuentes,1);
+            font-size: nth($tamaño-fuente,4);}}
+/*PAGINA CONTACTO*/
+.mainformulario {
+    background-color: nth($colores,3);}
+.titulocontacto {
+    margin-top: 10vh;
+    div {
+        h2 {
+            @extend %centralizador1;
+            font-family: nth($fuentes,2);
+            color: nth($colores,2);}}}
+.titulocontacto {
+    div {
+        h3 {
+            @extend %centralizador1;
+            font-family: nth($fuentes,2);
+            color: nth($colores,2);}}}
+.formulario {
+    width: 340px;
+    height: 440px;
+    background-color: nth($colores,5);
+    border-radius: 15px;
+    box-shadow: 0 0 40px 10px nth($colores,2);
+    margin: calc(50vh - 220px) auto;
+    padding: 20px 30px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+    font-family: nth($fuentes,2);
+    position: relative;
+    h2 {
+        margin: 10px 0;
+        text-align: center;
+        padding-bottom: 10px;
+        width: 100%;
+        color:nth($colores-fuente,2);
+        border-bottom: 3px solid nth($colores,2);}}
+.formulario {
+    p {
+        &:before {
+            content: attr(type);
+            display: block;
+            margin: 28px 0 0;
+            font-size: 14px;
+            color: nth($colores,2);}}}
+.formulario {
+            p {           
+            input {
+                width: 100%;
+                padding: 10px;
+                box-sizing: border-box;
+                background: none;
+                outline: none;
+                resize: none;
+                border: 0;
+                font-family: nth($fuentes,2);
+                transition: all 0.3s;
+                border-bottom: 2px solid nth($colores,3);
+            &:focus {
+                border-bottom: 2px solid nth($colores,3);}}}}
+.formulario {
+    button {
+    @extend %boton;
+    font-family: nth($fuentes,2);
+    margin: 8px 0 0;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+    background-color: nth($colores,2);
+    color: nth($colores-fuente,2);}}}
+.formulario {
+    div {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    right: 10px;
+    background: nth($colores,2);
+    color: nth($colores-fuente,3);
+    width: 320px;
+    padding: 16px 4px 16px 0;
+    border-radius: 6px;
+    font-size: 13px;
+    span {
+        margin: 0 5px 0 15px;}}}
+//FIXTURE
+.fixture {
+    padding: 20px 0px 0px 0px;
+}
+//SIMULADOR DE PARTIDOS
+
+main {
+    div {
+        div {
+            section {
+                div {
+                    div{
+                        figure{
+                            img {
+                                padding: 10px 30px;
+}}}}}}}}
+main {
+    div {
+        div {
+            section {
+                div {
+                    div{
+                        figure{
+                            figcaption {
+                                font-family: nth($fuentes,3);
+                                font-family: nth($fuentes,3);
+                                color: nth($colores-fuente,2)
+}}}}}}}}
+.partidos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 2px;
+}
+.primerafecha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    columns: 1;
+    border: red solid 2px;
+}
+.segundafecha {
+    columns: 2;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    border: red solid 2px;
+}
+.tercerafecha {
+    columns: 3;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    border: red solid 2px;
+}
+.primerPartido {
+    display: flex;
+    flex-direction: row; 
+    font-size: 12px;
+    
+}
+.segundoPartido {
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+}
+.tercerPartido {
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+}
+.cuartoPartido {
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+}
+.quintoPartido {
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+}
+.sextoPartido {
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    
+}
+.izquierdo {
+    display: flex;
+    text-align: center;
+    padding: 2px;
+}
+.derecho {
+    display: flex;
+    text-align: center;
+    padding: 2px;
+}
+.tabla {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    display: grid;
+    align-items: center;
+    align-content: center;
+}
+.tablaPosiciones {
+    border: 5px solid red;
+    padding: 20px;
+    font-size: 20px;
+    margin: 20px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    border-spacing: 25px 10px;}
+//INPUTS DE RESULTADOS
+.inputResultado {
+                margin: 15px 0px 0px 0px;
+                padding: 2px;
+                width: 20%;
+                height: 50%;
+                font-size: 20px;}
+.desaparecer {
+    display: none;}
+
+.btn {
+        @extend %boton;
+        font-family: nth($fuentes,2);
+        margin: 8px 0 0;
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover {
+        background-color: nth($colores,2);
+        color: nth($colores-fuente,2);}}
+table {
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+th {
+  cursor: pointer;
+}
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2
+}
+/* Formulario Login Index */
+#formularioLogin {
+    border: 3px solid #f1f1f1;
+    input[type=text], input[type=password] {
+        width: 25%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;}}
+#botonLogin {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 25%;}
+#botonRegistro {
+    text-align: center;
+    text-decoration: none;
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 25%;}
+#botonLogin:hover {
+    opacity: 0.8;}
+.cancelbtn {
+    width: 25%;
+    padding: 10px 18px;
+    background-color: #f44336;}
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;}
+img.bannerQatar {
+    width: 40%;}
+.container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    padding: 10px;}
+#olvidasteContraseña {
+    float: right;
+    padding-top: 16px;}
+//FORMULARIO REGISTRO
+/* Users List */
+.account_container {
+    margin: auto;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+    width: 850px;
+    display: flex;
+  }
+   
+  #CreateAccount h1 {
+    font-size: 2rem;
+  }
+  #CreateAccount .inputs_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .users_table {
+    background-color: rgba(1, 1, 1, 0.6);
+    color: black;
+    border: 1px solid black;
+    box-shadow: 0 0 5px 2px #111;
+    width: 100%;
+  }
+  .users_table th {
+    font-size: 1.2rem;
+    /* color: red; */
+  }
+  .users_table tbody tr:nth-child(odd) {
+    background-color: rgba(225, 0, 0, 0.2);
+    /* color: white; */
+    padding: 2rem 0;
+  }
+  .users_table tbody td {
+    padding: 1rem 0.5rem;
+    font-size: 1.2rem;
+  }
+  .deleteUser {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+  }
+//PANTALLA REGISTRO
+.pantallaLogueo {
+    margin: 1rem;
+    width: 100%;
+}
+
+.pantallaLogueo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0px;}
+#loguearse {
+    grid-column:1;
+    border: solid #7585E2 1px;}
+#registrarse {
+    grid-column: 2;
+    border: solid #7585E2 1px;
+    background-color: #04AA6D;}
+.inputs_container {
+    padding: 2rem;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    }
+.input-field {
+    padding: 1rem;
+    display: block ;
+    float: center;
+}
+
+.etiquetaUsuario {
+    font-size: 1.5rem;
+}
+.inputUsuario {
+    font-size: 1.5rem;
+}
+
+.tablaRegistros {
+    display: none;
+}
+#submitname {
+    margin: 1rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: solid 2px blue;
+    background-color: white;
+    color: #111;
+}

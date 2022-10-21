@@ -1,0 +1,19 @@
+{
+  "name": "interactuar-con-eventos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinwittmann90/Interactuar-con-eventos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martinwittmann90/Interactuar-con-eventos/issues"
+  },
+  "homepage": "https://github.com/martinwittmann90/Interactuar-con-eventos#readme",
+  "description": ""
+}
