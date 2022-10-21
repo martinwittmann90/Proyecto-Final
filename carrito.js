@@ -152,6 +152,16 @@ DOMbotonVaciar.addEventListener('click', () => {
     swal("Carrito vacio");
     })
 
+
+DOMbotonComprar.addEventListener('click', () => {
+    swal({
+        title: "Compra aprobada",
+        text: "Tu producto llegará en breve",
+        icon: "success",
+        button: "Continuar navegando",
+      });
+})
+
 cargarCarritoDeLocalStorage();
 renderizarProductos();
 renderizarCarrito();

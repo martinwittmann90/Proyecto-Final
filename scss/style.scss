@@ -108,12 +108,15 @@ main {
                     padding: 1rem 2rem 0 2.5rem;}}}}}
 
 /*PAGINA TRABAJOS PARA CELULARES*/
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 	.wrapper {
 		display:block;
 		grid-gap: 10px;
 		padding: 10px;}}
-/* ZOOM IMAGENES */
+
+//ZOOM IMAGENES ESTADIOS
+
 .img-hover-zoom {
 	height: 100%;
 	overflow: hidden;} 
@@ -122,7 +125,9 @@ main {
 	transition: transform 5s, filter 3s ease-in-out;}
 .img-hover-zoom--slowmo:hover img {
 	transform: scale(1.1);}
-/*PAGINA FIXTURE*/
+
+//PAGINA FIXTURE
+
 .seccion__inicial {
     padding: 1rem 2rem;
     background-color: nth($colores,2);
@@ -144,6 +149,7 @@ main {
             color: nth($colores-fuente,1);
             font-family: nth($fuentes,1);
             font-size: nth($tamaño-fuente,4);}}
+
 /*PAGINA CONTACTO*/
 .mainformulario {
     background-color: nth($colores,3);}
@@ -230,8 +236,8 @@ main {
 .fixture {
     padding: 20px 0px 0px 0px;
 }
-//SIMULADOR DE PARTIDOS
 
+//SIMULADOR DE PARTIDOS
 main {
     div {
         div {
@@ -254,6 +260,16 @@ main {
                                 font-family: nth($fuentes,3);
                                 color: nth($colores-fuente,2)
 }}}}}}}}
+#contenido {
+    background-color: nth($colores,7);
+}
+.tituloSeccion {
+    color:nth($colores-fuente, 2);
+    font-family: nth($fuentes, 2);
+    font-size: nth($tamaño-fuente,6);
+    padding: 2rem; 
+    text-align: center;
+}
 .partidos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -270,7 +286,7 @@ main {
     align-items: center;
     align-content: center;
     columns: 1;
-    border: red solid 2px;
+    border: black solid 2px;
 }
 .segundafecha {
     columns: 2;
@@ -278,7 +294,7 @@ main {
     align-items: center;
     align-content: center;
     display: flex;
-    border: red solid 2px;
+    border: black solid 2px;
 }
 .tercerafecha {
     columns: 3;
@@ -286,7 +302,7 @@ main {
     align-items: center;
     align-content: center;
     display: flex;
-    border: red solid 2px;
+    border: black solid 2px;
 }
 .primerPartido {
     display: flex;
@@ -340,7 +356,7 @@ main {
     align-content: center;
 }
 .tablaPosiciones {
-    border: 5px solid red;
+    border: 5px solid rgb(4, 4, 94);
     padding: 20px;
     font-size: 20px;
     margin: 20px;
@@ -353,12 +369,15 @@ main {
                 padding: 2px;
                 width: 20%;
                 height: 50%;
+                text-align: center;
+                border: black solid 1px;
                 font-size: 20px;}
 .desaparecer {
     display: none;}
 
-.btn {
+.btnSimulador {
         @extend %boton;
+        background-color: nth($colores,4);
         font-family: nth($fuentes,2);
         margin: 8px 0 0;
         cursor: pointer;
@@ -517,4 +536,27 @@ img.bannerQatar {
     border: solid 2px blue;
     background-color: white;
     color: #111;
+}
+
+//PAGINA ROPA
+.fondoRopa {
+    background-color: nth($colores,5);
+}
+.tituloRopa {
+    color:nth($colores-fuente, 2);
+    font-family: nth($fuentes, 2);
+    font-size: nth($tamaño-fuente,6);
+    padding: 2rem;
+    margin: 3rem;
+    text-align: center;
+}
+//BOTON LOGIN
+.botonIngresar {
+    padding: 0.2rem;
+    margin: 0.5rem;
+    background-color: #04AA6D;
+    color:nth($colores-fuente, 2);
+    font-family: nth($fuentes, 1);
+    font-size: nth($tamaño-fuente,2);
+    border: black solid 3px;
 }

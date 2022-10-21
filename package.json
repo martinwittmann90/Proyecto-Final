@@ -1,19 +1,19 @@
 {
-  "name": "interactuar-con-eventos",
+  "name": "proyecto-final",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/martinwittmann90/Interactuar-con-eventos.git"
+    "url": "git+https://github.com/martinwittmann90/Proyecto-Final.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/martinwittmann90/Interactuar-con-eventos/issues"
+    "url": "https://github.com/martinwittmann90/Proyecto-Final/issues"
   },
-  "homepage": "https://github.com/martinwittmann90/Interactuar-con-eventos#readme",
-  "description": ""
+  "homepage": "https://github.com/martinwittmann90/Proyecto-Final#readme"
 }

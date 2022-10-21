@@ -4,6 +4,12 @@ const form1 = document.querySelector("form");
 const getName = document.querySelector("#entername");
 const submitBtn = document.querySelector("#submitname");
 const forgetBtn = document.querySelector("#forgetname");
+const btnSimulador = document.querySelector(".btnSimulador");
+const btnSimulador2 = document.querySelector(".btnSimulador2");
+
+
+btnSimulador.style.backgroundColor = "#6ab150";
+btnSimulador2.style.backgroundColor = "#6ab150";
 
 const h1 = document.querySelector("h1");
 form1.addEventListener("submit", function (e) {
