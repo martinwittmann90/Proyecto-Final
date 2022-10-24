@@ -1,7 +1,6 @@
 {
   "name": "proyecto-final",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +14,6 @@
   "bugs": {
     "url": "https://github.com/martinwittmann90/Proyecto-Final/issues"
   },
-  "homepage": "https://github.com/martinwittmann90/Proyecto-Final#readme"
+  "homepage": "https://github.com/martinwittmann90/Proyecto-Final#readme",
+  "description": ""
 }

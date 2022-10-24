@@ -6,69 +6,48 @@
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"/>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="registro.js">
+        <link rel="stylesheet" href="index.js">
         <link rel="stylesheet" href="carrito.js">
         <script src="https://kit.fontawesome.com/75e53ee709.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"/>
         <title>Registro</title>
     </head>
-<body>
+<body class="fondos">
 <main >
     <div class="pantallaLogueo">
-    <section id="loguearse">
-        <h2>Iniciar Sesión</h2>
-        <h3>CLIENTES REGISTRADOS</h3>
-        <form id="formularioLogin" action="action_page.php" method="post">
-            <div class="container">
-                <label for="uname"><b>Email</b></label>
-                <input type="text" placeholder="Ingresar usuario" name="uname" required>
-                <label for="psw"><b>Contraseña</b></label>
-                <input type="password" placeholder="Ingresar contraseña" name="psw" required>
-                <button id="botonLogin" type="submit">Login</button>
-                <label>
-                <input type="checkbox" checked="checked" name="remember">Recordarme
-                </label>
-            </div>
-            <div class="container">
-            <a href="./registro.html" role="button" id="botonRegistro">Registrarme</a>
-                <span id="olvidasteContraseña"><a href="#">¿Olvidaste tu contraseña?</a></span>
-            </div>
-        </form>
-    </section>
-    <section class="registroUsuarios" id="registrarse">
-        <h2>NUEVOS USUARIOS</h2>
-            <div class="remember">
-                <input  type="hidden" value="Ingresar" />
-            </div>
-            <div class="forget">
-                <label for="forgetname"></label>
-                <input id="forgetname" type="reset" value="Cambiar usuario" />
-            </div>
-            <section class="form_container account_container">
-                    <form action="#" class="login_form" id="CreateAccount">
-                        <h1>Crear una cuenta</h1>
-                        <div class="inputs_container">
-                            <div class="input-field">
-                                <label for="name" class="user etiquetaUsuario" id="firstName">Nombre</label>
-                                <input type="text" id="FirstName" class="user inputUsuario" required />
-                            </div>
-                            <div class="input-field ">
-                                <label for="name" class="user etiquetaUsuario" id="lastName">Apellido</label>
-                                <input type="text" id="LastName" class="user inputUsuario" required />
-                            </div>
-                            <div class="input-field ">
-                                <label for="name" class="user etiquetaUsuario" id="email">Email</label>
-                                <input type="email" id="UserEmail" class="user inputUsuario" required />
-                            </div>
-                                <div class="input-field ">
-                                <label for="password" class="user etiquetaUsuario">Contraseña</label>
-                                <input type="password" id="UserPassword-1" class="user inputUsuario" required />
-                            </div>
-                        </div>
-                    <input id="submitname" type="submit" value="Registrar cuenta"/>
-                    <a href="./index.html">Volver</a>
-                    <br>
-                </form>
-            </section>
+      <section class="registroUsuarios" id="registrarse">
+          <div class="remember"><input  type="hidden" value="Ingresar" /></div>
+          <div class="forget">
+              <label for="forgetname"></label>
+              <input id="forgetname"  type="hidden" value="Cambiar usuario" />
+          </div>
+          <div class="form_container account_container">
+            <img src="./imagenes/hinchada.png" alt="hinchada">
+            <form action="#" class="login_form" id="CreateAccount" class="remember">
+                <div class="inputs_container">
+                  <h2>Crear una cuenta</h2>
+                  <div class="input-field">
+                      <label for="name" class="user etiquetaUsuario" id="firstName">Nombre</label>
+                      <input type="text" id="FirstName" class="user inputUsuario" required />
+                  </div>
+                  <div class="input-field ">
+                      <label for="name" class="user etiquetaUsuario" id="lastName">Apellido</label>
+                      <input type="text" id="LastName" class="user inputUsuario" required />
+                  </div>
+                  <div class="input-field ">
+                      <label for="name" class="user etiquetaUsuario" id="email">Email</label>
+                      <input type="email" id="UserEmail" class="user inputUsuario" required />
+                  </div>
+                      <div class="input-field ">
+                      <label for="password" class="user etiquetaUsuario">Contraseña</label>
+                      <input type="password" id="UserPassword-1" class="user inputUsuario" required />
+                  </div>
+                </div>
+                <input  id="submitname" type="submit" value="REGISTRAR CUENTA"/>
+                <button id="botonRegistro"><a href="./index.html">VOLVER</a></button>
+                <br>
+            </form>
+          </div>
             <section>
                 <table class="users_table tablaRegistros">
                         <thead>
@@ -86,6 +65,38 @@
         </section>
     </div>
 </main>
+<!-- FOOTER -->
+<footer class="footerindex">
+    <div>
+      <div class="footer1">
+        <h3>Mapa del sitio</h3><a class="navbar-brand" href="./index.html">
+        <img id="loguito" src="./imagenes/logo.png" alt="logo"></a>
+      </div>
+      <div>
+        <ul>
+          <li class="nav-item"><a class="nav-link" href="./fixture.html">Fixture</a></li>
+          <li class="nav-item"><a class="nav-link" href="./estadios.html">Estadios</a></li>
+          <li class="nav-item"><a class="nav-link" href="./simulador.html">Simulador</a></li>
+          <li class="nav-item"><a class="nav-link" href="./ropa.html">Ropa</a></li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="footer1">
+        <h3>CONECTAR</h3>
+      </div>
+      <div>
+        <ul>
+          <li><a href="https://www.instagram.com/">instagram</a></li>
+          <li><a href="https://www.linkedin.com/">linkedin</a></li>    
+          <li><a href="https://github.com/">github</a></li>
+          <li class="nav-item"><a class="nav-link" href="./contactanos.html">Contacto</a></li>    
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- FIN FOOTER -->
         <script src="./registro.js"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.all.min.js"></script>

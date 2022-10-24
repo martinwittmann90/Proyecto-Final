@@ -1,5 +1,4 @@
 // Local User Storage
-
 // Form
 const createAccount = document.getElementById("CreateAccount");
 
@@ -14,7 +13,6 @@ const userPassword_2 = document.getElementById("UserPassword-2");
 const userList = document.getElementById("user-list");
 
 // User Interface
-
 // Function  CreateUser
 function CreateUser(firstName, lastName, userEmail, userPassword_1) {
   this.firstName = firstName;
@@ -24,7 +22,6 @@ function CreateUser(firstName, lastName, userEmail, userPassword_1) {
 }
 
 // UserInterface Class
-
 class UI {
   static displayUsers() {
     const users = Store.getUsers();
@@ -85,7 +82,6 @@ class Store {
 document.addEventListener("DOMContentLoaded", UI.displayUsers);
 
 // Event: Add a User
-
 function addUser() {
   const user = new CreateUser(
     firstName.value,

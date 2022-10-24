@@ -13,41 +13,94 @@
     list-style: none;
     text-decoration: none;
     border: none;}
-
-/*HEADER*/
+body {
+    background-color: #E8E8E8;
+}
+//CONFIGURACION GENERAL DE LA PAGINA
+//HEADER
 #cabecera {
     font-size: nth($tamaño-fuente,2);
     border-bottom: 7px solid nth($colores,3);
-    background-color: nth($colores,2);
     padding: 4vh 0px;
     div {
-        background-color: nth($colores,2);
         nav {
             ul {
                 @extend %centralizador1;
                 li {
+                    margin: 0 20px;
                     a {
                         color:nth($colores-fuente, 2);
-                        font-family: nth($fuentes, 2);
+                        font-family: nth($fuentes, 3);
                         font-size: nth($tamaño-fuente,3);
                         &:hover {
-                            color:nth($colores-fuente, 3);
+                            color: #78333E;
                             transition: color 1s cubic-bezier(0.33, 1, 0.68, 1);
                             animation: heartBeat;
-                            animation-duration: 5s; }}}}}}
-    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-            display: none;}}
+                            animation-duration: 5s; }}}}}}}
+//FOOTER
+.footerindex {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+        div {
+            div {
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    li {
+                        padding-right: 20px;}}}}
+.footer1{
+    display: flex;
+    margin: 1rem;
+    h3 {
+        padding-right: 1rem;
+    }
+}
+background-color: #78333E;}
+//INDEX 
+#bannerIndex {
+    margin: 1rem 20rem;
+    width: 50%;
+position: relative;}
+#tituloIndex {
+    margin: 4rem 30rem;
+    color: #78323D;
+    font-family: nth($fuentes, 1);
+    font-size: nth($tamaño-fuente,4);
+    position: absolute;
+z-index: 1;}
+#botonIndex{
+    font-size: 20px;
+    margin: 33rem 15px;
+    padding: 2px 8px;
+    background: #78333E;
+    border-radius: 20%;
+    border: #111 solid 1px;
+    color: #f2f2f2;
+    position: absolute;
+    left: 43%;
+    z-index:1;
+    a {
+        text-decoration: none;
+        color: white;}}
+#arco {
+    margin: 0 12rem;
+    position: relative;
+}
+//INDEX - BOTON LOGIN
+.botonIngresar {
+    padding: 0.2rem;
+    margin: 0.5rem;
+    background-color: white;
+    color:nth($colores-fuente, 2);
+    font-family: nth($fuentes, 1);
+    font-size: nth($tamaño-fuente,2);
+    border-radius: 10%;
+    a {
+        text-decoration: none;}}
 
-/* HEADER PARA DESKTOP */
-@media only screen and (min-width : 481px) {
-#hamburguesa {
-	display: none;}}
-header {
-    @extend %hamburguesa;}
-
-/*MAIN*/
-/*PRESENTACION SITIO WEB*/
-/*PAGINA TRABAJOS*/
+//PAGINA ESTADIOS
 .cuerpotrabajos {
     background-color: nth($colores,7);}
 .cuerpoimagenes {
@@ -100,23 +153,15 @@ header {
     font-family: nth($fuentes,2);
     font-size: nth($tamaño-fuente,3);
     padding: 0 0 0rem 2.5rem;}
-main {
-    section {
-        div {
-            div {
-                img {
-                    padding: 1rem 2rem 0 2.5rem;}}}}}
+main { section { div {div {img {padding: 1rem 2rem 0 rem;}}}}}
 
-/*PAGINA TRABAJOS PARA CELULARES*/
-
+//PAGINA ESTADIOS CELULAR
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 	.wrapper {
 		display:block;
 		grid-gap: 10px;
 		padding: 10px;}}
-
-//ZOOM IMAGENES ESTADIOS
-
+//PAGINA ESTADIOS ZOOM
 .img-hover-zoom {
 	height: 100%;
 	overflow: hidden;} 
@@ -126,150 +171,60 @@ main {
 .img-hover-zoom--slowmo:hover img {
 	transform: scale(1.1);}
 
-//PAGINA FIXTURE
-
+//PAGINA FIXTURE Y SIMULADOR
 .seccion__inicial {
-    padding: 1rem 2rem;
-    background-color: nth($colores,2);
+    padding: 2px 50px;
+    margin: 40px;
+    background-color: #D9D9D9;
+    border-radius: 25%;
         h2 {
             padding: 1rem;
-            color: nth($colores-fuente,3);
+            color: #6C1F2B;
             font-family: nth($fuentes,1);}
             font-size: nth($tamaño-fuente,4);
             @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
                 h2 {
                     padding: 2rem 1rem 1rem 0.5rem;
-                    text-align: left;
-            }}}
-.seccion__intermedia {
-    padding: 1rem 2rem;
-    background-color: nth($colores,7);
-        h2 {
-            padding: 1rem;
-            color: nth($colores-fuente,1);
-            font-family: nth($fuentes,1);
-            font-size: nth($tamaño-fuente,4);}}
-
-/*PAGINA CONTACTO*/
-.mainformulario {
-    background-color: nth($colores,3);}
-.titulocontacto {
-    margin-top: 10vh;
-    div {
-        h2 {
-            @extend %centralizador1;
-            font-family: nth($fuentes,2);
-            color: nth($colores,2);}}}
-.titulocontacto {
-    div {
-        h3 {
-            @extend %centralizador1;
-            font-family: nth($fuentes,2);
-            color: nth($colores,2);}}}
-.formulario {
-    width: 340px;
-    height: 440px;
-    background-color: nth($colores,5);
-    border-radius: 15px;
-    box-shadow: 0 0 40px 10px nth($colores,2);
-    margin: calc(50vh - 220px) auto;
-    padding: 20px 30px;
-    max-width: calc(100vw - 40px);
-    box-sizing: border-box;
-    font-family: nth($fuentes,2);
-    position: relative;
-    h2 {
-        margin: 10px 0;
-        text-align: center;
-        padding-bottom: 10px;
-        width: 100%;
-        color:nth($colores-fuente,2);
-        border-bottom: 3px solid nth($colores,2);}}
-.formulario {
-    p {
-        &:before {
-            content: attr(type);
-            display: block;
-            margin: 28px 0 0;
-            font-size: 14px;
-            color: nth($colores,2);}}}
-.formulario {
-            p {           
-            input {
-                width: 100%;
-                padding: 10px;
-                box-sizing: border-box;
-                background: none;
-                outline: none;
-                resize: none;
-                border: 0;
-                font-family: nth($fuentes,2);
-                transition: all 0.3s;
-                border-bottom: 2px solid nth($colores,3);
-            &:focus {
-                border-bottom: 2px solid nth($colores,3);}}}}
-.formulario {
-    button {
-    @extend %boton;
-    font-family: nth($fuentes,2);
-    margin: 8px 0 0;
-    cursor: pointer;
-    transition: all 0.3s;
-    &:hover {
-    background-color: nth($colores,2);
-    color: nth($colores-fuente,2);}}}
-.formulario {
-    div {
-    content: "";
-    position: absolute;
-    bottom: -50px;
-    right: 10px;
-    background: nth($colores,2);
-    color: nth($colores-fuente,3);
-    width: 320px;
-    padding: 16px 4px 16px 0;
-    border-radius: 6px;
-    font-size: 13px;
-    span {
-        margin: 0 5px 0 15px;}}}
-//FIXTURE
+                    text-align: left;}}}
 .fixture {
-    padding: 20px 0px 0px 0px;
+    padding: 20px 0px 0px 0px;}
+//PAGINA SIMULADOR DE PARTIDOS
+main { div { div { section { div {div { figure{ 
+    img {
+    padding: 0px 10px 0 15px;}}}}}}}}
+main { div { div { section { div {div{ figure{ 
+    figcaption {
+    font-size: 20px;
+    font-family: nth($fuentes,3);
+    color: nth($colores-fuente,2)}}}}}}}}
+.tituloGrupo {
+    color: #6C1F2B;
+    font-family: nth($fuentes,3);
+    font-size: 30px;
+    font-weight: 800;
 }
-
-//SIMULADOR DE PARTIDOS
-main {
-    div {
-        div {
-            section {
-                div {
-                    div{
-                        figure{
-                            img {
-                                padding: 10px 30px;
-}}}}}}}}
-main {
-    div {
-        div {
-            section {
-                div {
-                    div{
-                        figure{
-                            figcaption {
-                                font-family: nth($fuentes,3);
-                                font-family: nth($fuentes,3);
-                                color: nth($colores-fuente,2)
-}}}}}}}}
-#contenido {
-    background-color: nth($colores,7);
+#botonessimulador {
+    text-align: center;
+    a {
+        text-decoration: none;
+        color: white;
+        font-weight: 700;
+    }
+}
+.botonsimulador{
+    margin: 0 15px;
+    padding: 2px 8px;
+    background: #78333E;
+    border-radius: 20%;
+    border: #111 solid 1px;
+    color: #f2f2f2;
 }
 .tituloSeccion {
     color:nth($colores-fuente, 2);
     font-family: nth($fuentes, 2);
     font-size: nth($tamaño-fuente,6);
     padding: 2rem; 
-    text-align: center;
-}
+    text-align: center;}
 .partidos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -278,127 +233,99 @@ main {
     justify-content: center;
     align-items: center;
     align-content: center;
-    padding: 2px;
-}
+    padding: 20px;}
 .primerafecha {
+    columns: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     align-content: center;
-    columns: 1;
-    border: black solid 2px;
-}
+    }
 .segundafecha {
     columns: 2;
     flex-direction: column;
     align-items: center;
     align-content: center;
-    display: flex;
-    border: black solid 2px;
-}
+    display: flex;}
 .tercerafecha {
     columns: 3;
     flex-direction: column;
     align-items: center;
     align-content: center;
-    display: flex;
-    border: black solid 2px;
-}
-.primerPartido {
+    display: flex;}
+.fixtpartido {
     display: flex;
     flex-direction: row; 
-    font-size: 12px;
-    
-}
+    font-size: 12px;}
 .segundoPartido {
     display: flex;
     flex-direction: row;
-    font-size: 12px;
-}
+    font-size: 12px;}
 .tercerPartido {
     display: flex;
     flex-direction: row;
-    font-size: 12px;
-}
+    font-size: 12px;}
 .cuartoPartido {
     display: flex;
     flex-direction: row;
-    font-size: 12px;
-}
+    font-size: 12px;}
 .quintoPartido {
     display: flex;
     flex-direction: row;
-    font-size: 12px;
-}
+    font-size: 12px;}
 .sextoPartido {
     display: flex;
     flex-direction: row;
     font-size: 12px;
-    
-}
+    }
 .izquierdo {
     display: flex;
     text-align: center;
-    padding: 2px;
-}
+    padding: 0;}
 .derecho {
     display: flex;
     text-align: center;
-    padding: 2px;
-}
+    padding: 0;}
 .tabla {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 5px;
     display: grid;
     align-items: center;
-    align-content: center;
-}
+    align-content: center;}
 .tablaPosiciones {
-    border: 5px solid rgb(4, 4, 94);
-    padding: 20px;
+    padding: 5px;
     font-size: 20px;
-    margin: 20px;
+    margin: 0 5px;
     letter-spacing: 2px;
     word-spacing: 2px;
     border-spacing: 25px 10px;}
-//INPUTS DE RESULTADOS
+//PAGINA SIMULADOR - INPUTS DE RESULTADOS
 .inputResultado {
-                margin: 15px 0px 0px 0px;
-                padding: 2px;
-                width: 20%;
-                height: 50%;
-                text-align: center;
-                border: black solid 1px;
-                font-size: 20px;}
+    margin: 10px 0px 0px 0px;
+    padding: 2px;
+    width: 25%;
+    height: 25%;
+    text-align: center;
+    border: black solid 1px;
+    font-size: 20px;}
 .desaparecer {
     display: none;}
 
-.btnSimulador {
-        @extend %boton;
-        background-color: nth($colores,4);
-        font-family: nth($fuentes,2);
-        margin: 8px 0 0;
-        cursor: pointer;
-        transition: all 0.3s;
-        &:hover {
-        background-color: nth($colores,2);
-        color: nth($colores-fuente,2);}}
 table {
-  border-spacing: 0;
-  width: 100%;
-  border: 1px solid #ddd;
-}
+    border-spacing: 0;
+    width: 100%;}
 th {
-  cursor: pointer;
-}
+  cursor: pointer;}
 th, td {
-  text-align: left;
-  padding: 16px;
-}
+    text-align: left;
+    padding: 8px;}
 tr:nth-child(even) {
-  background-color: #f2f2f2
+    background-color: #f2f2f2}
+.tablaPosiciones {
+    padding: 0 60px;
+    background-color: #D9D9D9;
 }
 /* Formulario Login Index */
 #formularioLogin {
@@ -437,126 +364,142 @@ tr:nth-child(even) {
 .imgcontainer {
     text-align: center;
     margin: 24px 0 12px 0;}
-img.bannerQatar {
-    width: 40%;}
 .container {
     display: flex;
     flex-direction: column; 
     justify-content: center;
-    align-items: center;
-    padding: 10px;}
+    align-items: center;}
 #olvidasteContraseña {
     float: right;
     padding-top: 16px;}
-//FORMULARIO REGISTRO
-/* Users List */
+//FORMULARIO LOGIN y REGISTRO
+.cuerpoingreso {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.cuerpoingreso__izquierda {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 100px;
+    img {
+        width: 25%;
+        margin: 10px 0;
+        padding: 10px 0;}} 
+.cuerpoingreso__izquierda {
+    h2 {
+        color: #78333E;
+        font-size: 40px;
+        margin: 10px 0;
+        padding: 10px 0;}}
+.cuerpoingreso__izquierda {
+    h3 {
+        color: #78333E;
+        font-size: 10px;
+        margin: 10px 0;
+        padding: 10px 0;}}
+.cuerpoingreso__izquierda {
+    form {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+        padding: 10px 100px 0 0;
+        input {
+            padding: 20px;
+            height: 10px;
+            text-align: center;
+            border: black solid 1px;
+            font-size: 10px;
+            width: 500px;}}}
+//PAGINA REGISTRO
 .account_container {
+    display: flex;
+    flex-direction: row;
     margin: auto;
-    font-family: "Roboto", sans-serif;
+    font-family: nth($fuentes, 3);
     letter-spacing: 1px;
     width: 850px;
+    display: flex;}
+#CreateAccount h1 {
+    font-size: 2rem;}
+#CreateAccount .inputs_container {
     display: flex;
-  }
-   
-  #CreateAccount h1 {
-    font-size: 2rem;
-  }
-  #CreateAccount .inputs_container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .users_table {
+    flex-direction: column;}
+.users_table {
     background-color: rgba(1, 1, 1, 0.6);
     color: black;
     border: 1px solid black;
     box-shadow: 0 0 5px 2px #111;
-    width: 100%;
-  }
-  .users_table th {
-    font-size: 1.2rem;
-    /* color: red; */
-  }
-  .users_table tbody tr:nth-child(odd) {
+    width: 100%;}
+.users_table th {
+    font-size: 1.2rem;}
+.users_table tbody tr:nth-child(odd) {
     background-color: rgba(225, 0, 0, 0.2);
-    /* color: white; */
-    padding: 2rem 0;
-  }
-  .users_table tbody td {
+    padding: 2rem 0;}
+.users_table tbody td {
     padding: 1rem 0.5rem;
-    font-size: 1.2rem;
-  }
-  .deleteUser {
+    font-size: 1.2rem;}
+.deleteUser {
     color: white;
     text-decoration: none;
-    font-weight: 700;
-  }
-//PANTALLA REGISTRO
+    font-weight: 700;}
 .pantallaLogueo {
     margin: 1rem;
-    width: 100%;
-}
-
+    width: 100%;}
 .pantallaLogueo {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 0px;}
-#loguearse {
-    grid-column:1;
-    border: solid #7585E2 1px;}
-#registrarse {
-    grid-column: 2;
-    border: solid #7585E2 1px;
-    background-color: #04AA6D;}
 .inputs_container {
     padding: 2rem;
     margin: 2rem;
     display: flex;
-    justify-content: center;
-    }
+    justify-content: center;}
 .input-field {
     padding: 1rem;
     display: block ;
-    float: center;
-}
-
+    float: center;}
 .etiquetaUsuario {
-    font-size: 1.5rem;
-}
+    font-size: 1.5rem;}
 .inputUsuario {
-    font-size: 1.5rem;
-}
-
+    font-size: 1.5rem;}
 .tablaRegistros {
-    display: none;
-}
+    display: none;}
+#botonRegistro{
+    margin: 1rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: black solid 2px;
+    background-color: #6C1F2B;
+    color: white;
+    font-family: nth($fuentes, 3);}
 #submitname {
     margin: 1rem;
     padding: 0.5rem;
     font-size: 1rem;
-    border: solid 2px blue;
-    background-color: white;
-    color: #111;
-}
-
+    border: black solid 2px;
+    background-color: #6C1F2B;
+    color: white;
+    font-family: nth($fuentes, 3);}
+#copa { width: 35%;}
 //PAGINA ROPA
 .fondoRopa {
-    background-color: nth($colores,5);
-}
+    background-color: nth($colores,5);}
 .tituloRopa {
     color:nth($colores-fuente, 2);
     font-family: nth($fuentes, 2);
     font-size: nth($tamaño-fuente,6);
     padding: 2rem;
     margin: 3rem;
-    text-align: center;
-}
-//BOTON LOGIN
-.botonIngresar {
-    padding: 0.2rem;
-    margin: 0.5rem;
-    background-color: #04AA6D;
-    color:nth($colores-fuente, 2);
-    font-family: nth($fuentes, 1);
-    font-size: nth($tamaño-fuente,2);
-    border: black solid 3px;
-}
+    text-align: center;}
+.fondos {
+        background: #E8E8E8;
+    }  
+.btnsimulador_div {
+    background-color: none;
+    margin: 20px;
+    @extend %boton;
+    font-family: nth($fuentes,2);
+    margin: 8px 0 0;
+    cursor: pointer;
+    transition: all 0.3s;}

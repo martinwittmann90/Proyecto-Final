@@ -1,3 +1,4 @@
+//FUNCION PARA INGRESO DE USUARIOS
 const rememberMe = document.querySelector(".remember");
 const forgetMe = document.querySelector(".forget");
 const form1 = document.querySelector("form");
@@ -7,9 +8,9 @@ const forgetBtn = document.querySelector("#forgetname");
 const btnSimulador = document.querySelector(".btnSimulador");
 const btnSimulador2 = document.querySelector(".btnSimulador2");
 
-
-btnSimulador.style.backgroundColor = "#6ab150";
-btnSimulador2.style.backgroundColor = "#6ab150";
+//ESTILO PARA LOS BOTONES DEL SIMULADOR
+btnSimulador.style.backgroundColor = "#78333E";
+btnSimulador2.style.backgroundColor = "#78333E"; 
 
 const h1 = document.querySelector("h1");
 form1.addEventListener("submit", function (e) {
@@ -34,12 +35,15 @@ function nameDisplayCheck() {
     forgetMe.style.display = "none";
     rememberMe.style.display = "inline";}}
     document.body.onload = nameDisplayCheck; 
-
+//FUNCION PARA QUE NAN EN LOS RESULTADOS SE REEMPLACE POR 0
 (function(original) {
     parseInt = function() {
         return original.apply(window, arguments) || 0;
     };
 })(parseInt);
+
+//FUNCIONES PARA CALCULAR RESULTADOS DE PARTIDOS Y TABLA DE POSICIONES
+//1.- FUNCION PARA CACULAR VICTORIA, DERROTA y EMPATE
 $(document).on('ready', constructor);
 function constructor()
 {
@@ -460,6 +464,7 @@ const obtenerDatos = async () => {
   email.value = datos[0].correo
 }
 
+//2.- BOTONES PARA ENVIAR O GUARDAR LOS RESULTADOS INGRESADOS POR EL USUARIO
 const btnenvio = document.getElementById("enviar");
 const btnguardo = document.getElementById("guardar");
 
@@ -591,15 +596,12 @@ Swal.fire({
   icon: 'success',
   title: '¡Sus datos han sido guardados!',
   showConfirmButton: false,
-  timer: 1500
-})
-}
+  timer: 1500})}
 
 btnguardo.addEventListener("click", (e) => {
 e.preventDefault();
 save()
 });
-
 
 btnenvio.addEventListener('click', (event) => {
   event.preventDefault();
@@ -644,18 +646,7 @@ btnenvio.addEventListener('click', (event) => {
                 to_GHPuntosPortugal: parseInt(puntosPortugal1.value)+parseInt(puntosPortugal2.value)+parseInt(puntosPortugal3.value),
                 to_GHPuntosGhana: parseInt(puntosGhana1.value)+parseInt(puntosGhana2.value)+parseInt(puntosGhana3.value),
                 to_GHPuntosUruguay: parseInt(puntosUruguay1.value)+parseInt(puntosUruguay2.value)+parseInt(puntosUruguay3.value),
-                to_GHPuntosCoreaDelSur: parseInt(puntosCorea1.value)+parseInt(puntosCorea2.value)+parseInt(puntosCorea3.value),
-/*              from_name: "Formulario",
-                to_name: nombreCompleto.value,
-                message: curso.value,
-                p_curso: precioCurso,
-                n_cuotas: cuotas.value,
-                p_cuota: precioCuotas,
-                reply_to: "formulario",
-                f_nacimiento: fechaNacimiento.value,
-                to_telefono: telefono.value,
-                to_pais: paises.value,
-                to_curso: curso.value, */}};
+                to_GHPuntosCoreaDelSur: parseInt(puntosCorea1.value)+parseInt(puntosCorea2.value)+parseInt(puntosCorea3.value),}};
 
         let headers = {
             'Content-type': 'application/json'};

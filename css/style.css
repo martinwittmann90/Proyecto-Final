@@ -2,7 +2,7 @@
 /*4*/
 /*10*/
 /*8*/
-.titulocontacto div h3, .titulocontacto div h2, #cabecera div nav ul {
+#cabecera div nav ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -10,7 +10,7 @@
   align-content: center;
 }
 
-.btnSimulador, .formulario button {
+.btnsimulador_div {
   background-color: #C1CCF7;
   border: solid 2px #7585E2;
   border-radius: 8px;
@@ -25,57 +25,6 @@
 }
 
 /*HAMBURGUESA*/
-header #hamburguesa {
-  width: 95%;
-  padding: 2vh 0vw;
-}
-header #hamburguesa nav .navbar {
-  width: 100%;
-  box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
-}
-header #hamburguesa nav .navbar .container {
-  width: 100%;
-  margin: auto;
-}
-header #hamburguesa nav .navbar .nav-container {
-  display: block;
-  position: relative;
-  height: 60px;
-}
-header #hamburguesa nav .navbar .nav-container .logo {
-  position: absolute;
-  top: 5px;
-  right: 15px;
-  font-size: 1.2rem;
-  width: 75%;
-}
-header #hamburguesa nav .navbar .nav-container {
-  display: block;
-  position: relative;
-  height: 60px;
-}
-header #hamburguesa nav .navbar .nav-container .menu-items {
-  display: flex;
-}
-header #hamburguesa nav .navbar div .menu-items li {
-  margin-bottom: 1.2rem;
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-header #hamburguesa nav .navbar .nav-container li {
-  list-style: none;
-}
-header #hamburguesa nav .navbar .nav-container li a {
-  text-decoration: none;
-  color: #F5F5F5;
-  font-weight: 500;
-  font-size: 1.2rem;
-  padding: 0.7rem;
-}
-header #hamburguesa nav .navbar .nav-container li a:hover {
-  font-weight: bolder;
-}
-
 #hamburguesa nav .navbar .nav-container .hamburger-lines {
   display: block;
   height: 26px;
@@ -218,42 +167,102 @@ header #hamburguesa nav .navbar .nav-container li a:hover {
   border: none;
 }
 
-/*HEADER*/
+body {
+  background-color: #E8E8E8;
+}
+
 #cabecera {
   font-size: 0.75rem;
   border-bottom: 7px solid #264C3C;
-  background-color: #7585E2;
   padding: 4vh 0px;
 }
-#cabecera div {
-  background-color: #7585E2;
+#cabecera div nav ul li {
+  margin: 0 20px;
 }
 #cabecera div nav ul li a {
   color: #000000;
-  font-family: sans-serif;
+  font-family: "Merriweather Sans";
   font-size: 1rem;
 }
 #cabecera div nav ul li a:hover {
-  color: #FCFAEF;
+  color: #78333E;
   transition: color 1s cubic-bezier(0.33, 1, 0.68, 1);
   animation: heartBeat;
   animation-duration: 5s;
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  #cabecera {
-    display: none;
-  }
+
+.footerindex {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  background-color: #78333E;
+}
+.footerindex div div ul {
+  display: flex;
+  flex-direction: row;
+}
+.footerindex div div ul li {
+  padding-right: 20px;
+}
+.footerindex .footer1 {
+  display: flex;
+  margin: 1rem;
+}
+.footerindex .footer1 h3 {
+  padding-right: 1rem;
 }
 
-/* HEADER PARA DESKTOP */
-@media only screen and (min-width: 481px) {
-  #hamburguesa {
-    display: none;
-  }
+#bannerIndex {
+  margin: 1rem 20rem;
+  width: 50%;
+  position: relative;
 }
-/*MAIN*/
-/*PRESENTACION SITIO WEB*/
-/*PAGINA TRABAJOS*/
+
+#tituloIndex {
+  margin: 4rem 30rem;
+  color: #78323D;
+  font-family: "Exo 2";
+  font-size: 2rem;
+  position: absolute;
+  z-index: 1;
+}
+
+#botonIndex {
+  font-size: 20px;
+  margin: 33rem 15px;
+  padding: 2px 8px;
+  background: #78333E;
+  border-radius: 20%;
+  border: #111 solid 1px;
+  color: #f2f2f2;
+  position: absolute;
+  left: 43%;
+  z-index: 1;
+}
+#botonIndex a {
+  text-decoration: none;
+  color: white;
+}
+
+#arco {
+  margin: 0 12rem;
+  position: relative;
+}
+
+.botonIngresar {
+  padding: 0.2rem;
+  margin: 0.5rem;
+  background-color: white;
+  color: #000000;
+  font-family: "Exo 2";
+  font-size: 0.75rem;
+  border-radius: 10%;
+}
+.botonIngresar a {
+  text-decoration: none;
+}
+
 .cuerpotrabajos {
   background-color: #C1CCF7;
 }
@@ -331,10 +340,9 @@ header #hamburguesa nav .navbar .nav-container li a:hover {
 }
 
 main section div div img {
-  padding: 1rem 2rem 0 2.5rem;
+  padding: 1rem 2rem 0 rem;
 }
 
-/*PAGINA TRABAJOS PARA CELULARES*/
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .wrapper {
     display: block;
@@ -357,13 +365,15 @@ main section div div img {
 }
 
 .seccion__inicial {
-  padding: 1rem 2rem;
-  background-color: #7585E2;
+  padding: 2px 50px;
+  margin: 40px;
+  background-color: #D9D9D9;
+  border-radius: 25%;
   font-size: 2rem;
 }
 .seccion__inicial h2 {
   padding: 1rem;
-  color: #FCFAEF;
+  color: #6C1F2B;
   font-family: "Exo 2";
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
@@ -373,124 +383,43 @@ main section div div img {
   }
 }
 
-.seccion__intermedia {
-  padding: 1rem 2rem;
-  background-color: #C1CCF7;
-}
-.seccion__intermedia h2 {
-  padding: 1rem;
-  color: #7585E2;
-  font-family: "Exo 2";
-  font-size: 2rem;
-}
-
-/*PAGINA CONTACTO*/
-.mainformulario {
-  background-color: #264C3C;
-}
-
-.titulocontacto {
-  margin-top: 10vh;
-}
-.titulocontacto div h2 {
-  font-family: sans-serif;
-  color: #7585E2;
-}
-
-.titulocontacto div h3 {
-  font-family: sans-serif;
-  color: #7585E2;
-}
-
-.formulario {
-  width: 340px;
-  height: 440px;
-  background-color: #F5F5F5;
-  border-radius: 15px;
-  box-shadow: 0 0 40px 10px #7585E2;
-  margin: calc(50vh - 220px) auto;
-  padding: 20px 30px;
-  max-width: calc(100vw - 40px);
-  box-sizing: border-box;
-  font-family: sans-serif;
-  position: relative;
-}
-.formulario h2 {
-  margin: 10px 0;
-  text-align: center;
-  padding-bottom: 10px;
-  width: 100%;
-  color: #000000;
-  border-bottom: 3px solid #7585E2;
-}
-
-.formulario p:before {
-  content: attr(type);
-  display: block;
-  margin: 28px 0 0;
-  font-size: 14px;
-  color: #7585E2;
-}
-
-.formulario p input {
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-  background: none;
-  outline: none;
-  resize: none;
-  border: 0;
-  font-family: sans-serif;
-  transition: all 0.3s;
-  border-bottom: 2px solid #264C3C;
-}
-.formulario p input:focus {
-  border-bottom: 2px solid #264C3C;
-}
-
-.formulario button {
-  font-family: sans-serif;
-  margin: 8px 0 0;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-.formulario button:hover {
-  background-color: #7585E2;
-  color: #000000;
-}
-
-.formulario div {
-  content: "";
-  position: absolute;
-  bottom: -50px;
-  right: 10px;
-  background: #7585E2;
-  color: #FCFAEF;
-  width: 320px;
-  padding: 16px 4px 16px 0;
-  border-radius: 6px;
-  font-size: 13px;
-}
-.formulario div span {
-  margin: 0 5px 0 15px;
-}
-
 .fixture {
   padding: 20px 0px 0px 0px;
 }
 
 main div div section div div figure img {
-  padding: 10px 30px;
+  padding: 0px 10px 0 15px;
 }
 
 main div div section div div figure figcaption {
-  font-family: "Merriweather Sans";
+  font-size: 20px;
   font-family: "Merriweather Sans";
   color: #000000;
 }
 
-#contenido {
-  background-color: #C1CCF7;
+.tituloGrupo {
+  color: #6C1F2B;
+  font-family: "Merriweather Sans";
+  font-size: 30px;
+  font-weight: 800;
+}
+
+#botonessimulador {
+  text-align: center;
+}
+#botonessimulador a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+}
+
+.botonsimulador {
+  margin: 0 15px;
+  padding: 2px 8px;
+  background: #78333E;
+  border-radius: 20%;
+  border: #111 solid 1px;
+  color: #f2f2f2;
 }
 
 .tituloSeccion {
@@ -509,16 +438,15 @@ main div div section div div figure figcaption {
   justify-content: center;
   align-items: center;
   align-content: center;
-  padding: 2px;
+  padding: 20px;
 }
 
 .primerafecha {
+  columns: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   align-content: center;
-  columns: 1;
-  border: black solid 2px;
 }
 
 .segundafecha {
@@ -527,7 +455,6 @@ main div div section div div figure figcaption {
   align-items: center;
   align-content: center;
   display: flex;
-  border: black solid 2px;
 }
 
 .tercerafecha {
@@ -536,10 +463,9 @@ main div div section div div figure figcaption {
   align-items: center;
   align-content: center;
   display: flex;
-  border: black solid 2px;
 }
 
-.primerPartido {
+.fixtpartido {
   display: flex;
   flex-direction: row;
   font-size: 12px;
@@ -578,40 +504,39 @@ main div div section div div figure figcaption {
 .izquierdo {
   display: flex;
   text-align: center;
-  padding: 2px;
+  padding: 0;
 }
 
 .derecho {
   display: flex;
   text-align: center;
-  padding: 2px;
+  padding: 0;
 }
 
 .tabla {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 5px;
   display: grid;
   align-items: center;
   align-content: center;
 }
 
 .tablaPosiciones {
-  border: 5px solid rgb(4, 4, 94);
-  padding: 20px;
+  padding: 5px;
   font-size: 20px;
-  margin: 20px;
+  margin: 0 5px;
   letter-spacing: 2px;
   word-spacing: 2px;
   border-spacing: 25px 10px;
 }
 
 .inputResultado {
-  margin: 15px 0px 0px 0px;
+  margin: 10px 0px 0px 0px;
   padding: 2px;
-  width: 20%;
-  height: 50%;
+  width: 25%;
+  height: 25%;
   text-align: center;
   border: black solid 1px;
   font-size: 20px;
@@ -621,22 +546,9 @@ main div div section div div figure figcaption {
   display: none;
 }
 
-.btnSimulador {
-  background-color: #D9F672;
-  font-family: sans-serif;
-  margin: 8px 0 0;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-.btnSimulador:hover {
-  background-color: #7585E2;
-  color: #000000;
-}
-
 table {
   border-spacing: 0;
   width: 100%;
-  border: 1px solid #ddd;
 }
 
 th {
@@ -645,11 +557,16 @@ th {
 
 th, td {
   text-align: left;
-  padding: 16px;
+  padding: 8px;
 }
 
 tr:nth-child(even) {
   background-color: #f2f2f2;
+}
+
+.tablaPosiciones {
+  padding: 0 60px;
+  background-color: #D9D9D9;
 }
 
 /* Formulario Login Index */
@@ -702,16 +619,11 @@ tr:nth-child(even) {
   margin: 24px 0 12px 0;
 }
 
-img.bannerQatar {
-  width: 40%;
-}
-
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px;
 }
 
 #olvidasteContraseña {
@@ -719,10 +631,57 @@ img.bannerQatar {
   padding-top: 16px;
 }
 
-/* Users List */
+.cuerpoingreso {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cuerpoingreso__izquierda {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 100px;
+}
+.cuerpoingreso__izquierda img {
+  width: 25%;
+  margin: 10px 0;
+  padding: 10px 0;
+}
+
+.cuerpoingreso__izquierda h2 {
+  color: #78333E;
+  font-size: 40px;
+  margin: 10px 0;
+  padding: 10px 0;
+}
+
+.cuerpoingreso__izquierda h3 {
+  color: #78333E;
+  font-size: 10px;
+  margin: 10px 0;
+  padding: 10px 0;
+}
+
+.cuerpoingreso__izquierda form {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  padding: 10px 100px 0 0;
+}
+.cuerpoingreso__izquierda form input {
+  padding: 20px;
+  height: 10px;
+  text-align: center;
+  border: black solid 1px;
+  font-size: 10px;
+  width: 500px;
+}
+
 .account_container {
+  display: flex;
+  flex-direction: row;
   margin: auto;
-  font-family: "Roboto", sans-serif;
+  font-family: "Merriweather Sans";
   letter-spacing: 1px;
   width: 850px;
   display: flex;
@@ -733,8 +692,8 @@ img.bannerQatar {
 }
 
 #CreateAccount .inputs_container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
 }
 
 .users_table {
@@ -747,12 +706,10 @@ img.bannerQatar {
 
 .users_table th {
   font-size: 1.2rem;
-  /* color: red; */
 }
 
 .users_table tbody tr:nth-child(odd) {
   background-color: rgba(225, 0, 0, 0.2);
-  /* color: white; */
   padding: 2rem 0;
 }
 
@@ -776,17 +733,6 @@ img.bannerQatar {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 0px;
-}
-
-#loguearse {
-  grid-column: 1;
-  border: solid #7585E2 1px;
-}
-
-#registrarse {
-  grid-column: 2;
-  border: solid #7585E2 1px;
-  background-color: #04AA6D;
 }
 
 .inputs_container {
@@ -814,13 +760,28 @@ img.bannerQatar {
   display: none;
 }
 
+#botonRegistro {
+  margin: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: black solid 2px;
+  background-color: #6C1F2B;
+  color: white;
+  font-family: "Merriweather Sans";
+}
+
 #submitname {
   margin: 1rem;
   padding: 0.5rem;
   font-size: 1rem;
-  border: solid 2px blue;
-  background-color: white;
-  color: #111;
+  border: black solid 2px;
+  background-color: #6C1F2B;
+  color: white;
+  font-family: "Merriweather Sans";
+}
+
+#copa {
+  width: 35%;
 }
 
 .fondoRopa {
@@ -836,14 +797,17 @@ img.bannerQatar {
   text-align: center;
 }
 
-.botonIngresar {
-  padding: 0.2rem;
-  margin: 0.5rem;
-  background-color: #04AA6D;
-  color: #000000;
-  font-family: "Exo 2";
-  font-size: 0.75rem;
-  border: black solid 3px;
+.fondos {
+  background: #E8E8E8;
+}
+
+.btnsimulador_div {
+  background-color: none;
+  margin: 20px;
+  font-family: sans-serif;
+  margin: 8px 0 0;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
 /*# sourceMappingURL=style.css.map */
